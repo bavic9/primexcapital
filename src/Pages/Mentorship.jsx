@@ -150,14 +150,14 @@ const Mentorship = () => {
             onClick={() => { setBg('Forex') }}
             className={
               bg === "Forex"
-                ? "border rounded-s-full border-blue bg-blue text-white px-6 text-center w-1/2 text-3xl font-bold"
-                : "border rounded-s-full border-blue px-6 text-center w-1/2 text-3xl font-bold"
+                ? "border rounded-s-full border-blue bg-blue text-white px-6 text-center w-1/2 md:text-3xl text-lg font-bold"
+                : "border rounded-s-full border-blue px-6 text-center w-1/2 md:text-3xl text-lg font-bold"
             }
           >
             <div className={
               activeLink === 'tabs'
                 ? 'py-6'
-                : 'py-5 md:py-6'
+                : 'py-6'
             }
               eventKey="first"
               onClick={() => {
@@ -174,14 +174,14 @@ const Mentorship = () => {
             }}
             className={
               bg === "Crypto"
-                ? "border border-blue bg-blue text-white px-6 text-center w-1/2 text-3xl font-bold"
-                : "border border-blue px-6 text-center w-1/2 text-3xl font-bold"
+                ? "border border-blue bg-blue text-white px-6 text-center w-1/2 md:text-3xl text-lg font-bold"
+                : "border border-blue px-6 text-center w-1/2 md:text-3xl text-lg font-bold"
             }
           >
             <div className={
               activeLink === 'tab2'
                 ? 'py-6'
-                : 'py-5 md:py-6'
+                : 'py-6'
               }
               eventKey="second"
               onClick={() => {
@@ -197,8 +197,8 @@ const Mentorship = () => {
             }}
             className={
               bg === "Synthetics"
-                ? "border rounded-e-full border-blue bg-blue px-3 text-white text-center w-1/2 text-3xl font-bold"
-                : "border rounded-e-full border-blue text-center px-3 w-1/2 md:text-3xl text-xl font-bold"
+                ? "border rounded-e-full border-blue bg-blue px-6 text-white text-center w-1/2 md:text-3xl text-lg font-bold"
+                : "border rounded-e-full border-blue text-center px-6 w-1/2 md:text-3xl text-lg font-bold"
             }
           >
             <div className={

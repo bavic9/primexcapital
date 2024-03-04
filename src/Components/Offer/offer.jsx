@@ -16,7 +16,7 @@ const offer = () => {
 
         {/* offer bottom flex */}
         <div className='flex flex-col lg:flex-row justify-around items-center space-y-16 lg:space-y-0 lg:w-[75%] lg:m-auto '>
-            <div className='mx-4 lg:h-[420px] md:w-[300px] border-blue border-2 rounded-3xl space-y-16 pb-16 shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'>
+            <div className='mx-4 lg:max-h-[420px] md:w-[300px] border-blue border-2 rounded-3xl space-y-16 pb-16 shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'>
                 <h1 className='pt-12 text-center text-black font-varela font-semibold md:text-3xl text-2xl'>Trading Community</h1>
                 <p className='text-center font-varela md:text-xl text-lg text-gray-500 w-[90%] m-auto leading-10 font-semibold'>
                     We foster a trading community of over 100,000 subscribers where high quality signals, trading resources and tools are shared for free. Click the button below to join now.
@@ -25,7 +25,7 @@ const offer = () => {
                     Join Telegram Channel
                 </button>
             </div>
-            <div className='mx-4 lg:h-[420px] md:w-[300px] border-blue border-2 rounded-3xl space-y-16 pb-16 shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'>
+            <div className='mx-4 lg:max-h-[420px] md:w-[300px] border-blue border-2 rounded-3xl space-y-16 pb-16 shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'>
                 <h1 className='pt-12 text-center text-black font-varela font-semibold md:text-3xl text-2xl'>Trading Community</h1>
                 <p className='text-center font-varela md:text-xl text-lg text-gray-500 w-[90%] m-auto leading-10 font-semibold'>
                     We foster a trading community of over 100,000 subscribers where high quality signals, trading resources and tools are shared for free. Click the button below to join now.
@@ -34,7 +34,7 @@ const offer = () => {
                     Join Telegram Channel
                 </button>
             </div>
-            <div className='mx-4 lg:h-[420px] md:w-[300px] border-blue border-2 rounded-3xl space-y-16 pb-16 shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'>
+            <div className='mx-4 lg:max-h-[420px] md:w-[300px] border-blue border-2 rounded-3xl space-y-16 pb-16 shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'>
                 <h1 className='pt-12 text-center text-black font-varela font-semibold md:text-3xl text-2xl'>Trading Community</h1>
                 <p className='text-center font-varela md:text-xl text-lg text-gray-500 w-[90%] m-auto leading-10 font-semibold'>
                     We foster a trading community of over 100,000 subscribers where high quality signals, trading resources and tools are shared for free. Click the button below to join now.

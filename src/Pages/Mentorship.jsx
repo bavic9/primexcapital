@@ -131,7 +131,7 @@ const Mentorship = () => {
 
 
   return (
-    <div className='w-[90%] lg:space-y-[10rem] space-y-20 py-[6rem] m-auto'>
+    <div className='w-[90%] lg:space-y-[8rem] space-y-10 py-[6rem] m-auto'>
       {/* head */}
       <div className='text-center space-y-10'>
         <h1 className='text-6xl font-varela font-semibold'>Choose your <span className='text-blue'>plan</span></h1>

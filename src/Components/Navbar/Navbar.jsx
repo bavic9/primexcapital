@@ -47,7 +47,7 @@ const Navbar = () => {
                 className='flex items-center gap-[10px]'>
                 <Link to='/'><img className='md:w-48 w-40 md:h-20 h-12 ' src={logoWhite} alt="logo" /></Link>
             </div>
-            <div ref={NavRef} className=' md:flex gap-10 relative menu'>
+            <div ref={NavRef} className=' md:flex gap-10 relative menu space-y-8'>
                 <ul className='md:flex flex md:flex-row flex-col gap-[50px] items-center text-gray-700 text-2xl font-semibold outline-none transition'>
                     <li
                         onClick={() => { setMenu('Home') }}
@@ -82,7 +82,7 @@ const Navbar = () => {
                 </ul>
                 <div
                     onClick={() => { setMenu('Login') }}
-                    className='md:mt-0 mt-28'>
+                    className='md:mt-0 mt-4'>
                     <Link to='/login'><button className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-4 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Login</button></Link>
                 </div>
                 <div className='lg:hidden outline-none  cursor-pointer flex justify-between w-full px-5 absolute top-[2rem]'>

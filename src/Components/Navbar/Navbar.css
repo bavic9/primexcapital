@@ -35,6 +35,10 @@ hr{
     .responsive_nav{
       transform: none;
     }
+
+    hr{
+      display: none;
+    }
   }
 
 

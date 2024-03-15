@@ -8,6 +8,7 @@ import Faqs from './Pages/Faqs'
 import FireCal from './Pages/FireCal'
 import LoginSignup from './Pages/LoginSignup';
 import Home from './Pages/Home'
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/faqs' element={<Faqs category='faq'/>}/>
           <Route path='/login' element={<LoginSignup/>}/>
          </Routes>
+         <Footer/>
       </BrowserRouter>
     </div>
   );

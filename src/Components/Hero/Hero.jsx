@@ -4,11 +4,11 @@ import hero from '../Assets/btc.png'
 
 const Hero = () => {
     return (
-        <section className='py-10 px-4'>
-            <div className='m-auto lg:px-10 pt-16 lg:py-16 flex flex-col justify-around lg:flex-row items-center px-4 space-y-16 lg:space-y-0'>
+        <section className='py-20 md:px-8 px-4'>
+            <div className='m-auto lg:px-10 pt-16 lg:py-16 flex flex-col justify-around lg:flex-row items-center px-4 space-y-16 lg:space-y-0 animationUp'>
                 {/* hero left */}
-                <div className='lg:w-1/2 md:p-16 m-auto anim'>
-                    <h1 className='text-white font-prompt leading-[1.2] lg:text-6xl text-4xl font-bold text-center lg:text-left lg:p-0'>
+                <div className='lg:w-1/2 md:p-16 lg:m-auto anim'>
+                    <h1 className='text-white font-prompt leading-[1.2] lg:text-6xl text-5xl font-bold text-center lg:text-left lg:p-0'>
                         This is <span className='text-blue'>PRIME X CAPITAL</span> where you learn to trade like a pro in no time
                         <div className='curved-line'></div>
                     </h1>

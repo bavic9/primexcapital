@@ -15,27 +15,27 @@ export const PlanCard = ({
             <div className='border-2 lg:max-h-[750px] px-6 mx-4 py-14 my-6 border-blue rounded-3xl shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110 '>
                 <h1 className=" md:text-3xl text-2xl text-gray-500 text-center font-semibold">{title}</h1>
                 <p className="font-bold text-center md:text-4xl text-3xl py-6">{price}</p>
-                <h5 className="md:text-2xl text-xl text-gray-500 text-center px-6 py-2">{headContent}</h5>
-                <div className="py-6 text-gray-500">
+                <h5 className="md:text-2xl text-lg text-gray-500 text-center px-6 py-2">{headContent}</h5>
+                <div className="py-6 px-4 text-gray-500">
                     <div className="flex items-center justify-start gap-2 py-3">
-                        <span className="text-blue md:text-5xl text-3xl">{icon}</span>
-                        <p className="md:text-2xl text-xl">{content1}</p>
+                        <span className="text-blue md:text-4xl text-3xl">{icon}</span>
+                        <p className="md:text-xl text-lg">{content1}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
-                        <span className="text-blue md:text-5xl text-3xl">{icon}</span>
-                        <p className="md:text-2xl text-xl">{content2}</p>
+                        <span className="text-blue md:text-4xl text-3xl">{icon}</span>
+                        <p className="md:text-xl text-lg">{content2}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
-                        <span className="text-blue md:text-5xl text-3xl">{icon}</span>
-                        <p className="md:text-2xl text-xl">{content3}</p>
+                        <span className="text-blue md:text-4xl text-3xl">{icon}</span>
+                        <p className="md:text-xl text-lg">{content3}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
-                        <span className="text-blue md:text-5xl text-3xl">{icon}</span>
-                        <p className="md:text-2xl text-xl">{content4}</p>
+                        <span className="text-blue md:text-4xl text-3xl">{icon}</span>
+                        <p className="md:text-xl text-lg">{content4}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
-                        <span className="text-blue md:text-5xl text-3xl">{icon}</span>
-                        <p className="md:text-2xl text-xl">{content5}</p>
+                        <span className="text-blue md:text-4xl text-3xl">{icon}</span>
+                        <p className="md:text-xl text-lg">{content5}</p>
                     </div>
                 </div>
                 <div className="flex justify-center py-4">

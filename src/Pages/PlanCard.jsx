@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 export const PlanCard = ({
     title,
     price,
@@ -9,7 +10,7 @@ export const PlanCard = ({
     content4,
     content5,
     icon }) => {
-        
+
     return (
         <div className="max-w-[1140px] m-auto py-4 lg:w-[30%] md:w-[400px]">
             <div className='border-2 lg:max-h-[750px] px-6 mx-4 py-14 my-6 border-blue rounded-3xl shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110 '>
@@ -39,7 +40,11 @@ export const PlanCard = ({
                     </div>
                 </div>
                 <div className="flex justify-center py-4">
-                    <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 w-[137px] transition ease-in-out duration-30 text-white hover:shadow-lg'>Get Started</button>
+                    <Link to={'/payment'}>
+                        <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 w-[137px] transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                            Get Started
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

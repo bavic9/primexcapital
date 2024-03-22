@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Hero.css'
 import hero from '../Assets/btc.png'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 const Hero = () => {
+
+    useEffect(() => {
+        AOS.init({duration: 2000})
+    }, [])
+
     return (
         <section className='py-20 md:px-8 px-4'>
             <div className='m-auto lg:px-10 pt-16 lg:py-16 flex flex-col justify-around lg:flex-row items-center px-4 space-y-16 lg:space-y-0 animationUp'>
                 {/* hero left */}
-                <div className='lg:w-1/2 md:p-16 lg:m-auto anim'>
+                <div className='lg:w-1/2 md:p-16 lg:m-auto ' data-aos="fade-right">
                     <h1 className='text-white font-prompt leading-[1.2] lg:text-6xl text-5xl font-bold text-center lg:text-left lg:p-0'>
                         This is <span className='text-blue'>PRIME X CAPITAL</span> where you learn to trade like a pro in no time
                         <div className='curved-line'></div>
@@ -27,7 +35,7 @@ const Hero = () => {
 
 
                 {/* hero right */}
-                <div className='lg:w-1/2 animr'>
+                <div className='lg:w-1/2 ' data-aos="fade-left">
                     <img
                         className=''
                         src={hero} alt="" />

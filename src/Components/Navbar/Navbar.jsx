@@ -10,6 +10,17 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 
 
+
+    const logOut = () => {
+        window.localStorage.clear()
+        window.location.href = "./login"
+    }
+
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    // const userAuthentication = () => {
+    //     setIsLoggedIn(false)
+    // }
     const [scrolled, setScrolled] = useState(false);
 
 
@@ -80,11 +91,23 @@ const Navbar = () => {
                         <Link to='/faqs'>FAQs</Link>{menu === 'FAQs' ? <hr /> : <></>}
                     </li>
                 </ul>
-                <div
-                    onClick={() => { setMenu('Login') }}
-                    className='md:mt-0 mt-4'>
-                    <Link to='/login'><button className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-4 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Login</button></Link>
-                </div>
+                {
+                    localStorage.getItem("logs") ? (
+                        <div
+                            onClick={() => { setMenu('Login') }}
+                            className='md:mt-0 mt-4'>
+                            <Link onClick={logOut} ><button className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-3 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Logout</button></Link>
+                        </div>
+                    ) : (
+                        <div
+                            onClick={() => { setMenu('Login') }}
+                            className='md:mt-0 mt-4'>
+                            <Link to='/login'><button className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-3 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Login</button></Link>
+                        </div>
+                    )
+                }
+
+
                 <div className='lg:hidden outline-none  cursor-pointer flex justify-between w-full md:px-12 px-5 absolute top-[0rem]'>
                     <img src={logosmb} className='w-16' alt="logo" />
                     <button className=' p-2 text-black hover:bg-lightBlue hover:p-2 hover:rounded-md ease-in-out duration-700 ' onClick={showNavBar}>
@@ -104,7 +127,3 @@ const Navbar = () => {
 export default Navbar
 
 
-
-
-
-// className=

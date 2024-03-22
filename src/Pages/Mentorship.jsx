@@ -5,6 +5,9 @@ import { PlanCard } from './PlanCard';
 
 const Mentorship = () => {
 
+
+  
+
   const [bg, setBg] = useState('Forex')
   const [activeLink, setActiveLink] = useState('Tab 1');
   const [toggle, setToggle] = useState(1)
@@ -182,7 +185,7 @@ const Mentorship = () => {
               activeLink === 'tab2'
                 ? 'py-6'
                 : 'py-6'
-              }
+            }
               eventKey="second"
               onClick={() => {
                 updateToggle(2);
@@ -226,6 +229,7 @@ const Mentorship = () => {
                     key={index}
                     {...project}
                   />
+                  
                 )
               })
             }

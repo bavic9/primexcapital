@@ -13,7 +13,7 @@ export const PlanCard = ({
 
     return (
         <div className="max-w-[1140px] m-auto py-4 lg:w-[30%] md:w-[400px]">
-            <div className='border-2 lg:max-h-[750px] px-2 py-14 my-6 border-blue rounded-3xl shadow-lg shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110 '>
+            <div className='border-2 lg:max-h-[750px] px-2 py-14 my-6 border-blue rounded-3xl shadow-sm shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110 '>
                 <h1 className=" md:text-3xl text-2xl text-gray-500 text-center font-semibold">{title}</h1>
                 <p className="font-bold text-center md:text-4xl text-3xl py-6">{price}</p>
                 <h5 className="md:text-2xl text-lg text-gray-500 text-center px-6 py-2">{headContent}</h5>
@@ -41,7 +41,7 @@ export const PlanCard = ({
                 </div>
                 <div className="flex justify-center py-4">
                     <Link to={'/payment'}>
-                        <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 w-[107px] transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                        <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 transition ease-in-out duration-30 text-white hover:shadow-lg'>
                             Get Started
                         </button>
                     </Link>

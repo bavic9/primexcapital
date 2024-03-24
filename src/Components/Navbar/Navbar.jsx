@@ -50,8 +50,8 @@ const Navbar = () => {
 
     return (
         <div
-            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-full  flex justify-between z-50 items-center md:px-10 px-4 py-3 shadow-lg'
-                : ' flex bg-white justify-between items-center md:px-10 px-4 py-3 shadow-lg '}
+            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-screen flex justify-between z-50 items-center md:px-10 px-4 py-3 shadow-lg'
+                : ' flex bg-white justify-between items-center md:px-10 px-4 py-3 shadow-lg w-screen'}
         >
             <div
                 onClick={() => { setMenu('Home') }}

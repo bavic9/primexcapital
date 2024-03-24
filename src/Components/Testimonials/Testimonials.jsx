@@ -25,7 +25,7 @@ const Testimonials = () => {
 
             <div className='lg:p-4'>
                 <div className='lg:flex items-center justify-around space-y-6 lg:space-y-0 gap-6' data-aos="fade-up">
-                    <div className=' bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
+                    <div className=' bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-4 lg:px-10 py-6 shadow-lg'>
                         <h2 className='text-xl py-4 font-varela font-semibold'>
                             Amazing Analysis
                         </h2>
@@ -45,7 +45,7 @@ const Testimonials = () => {
                         </div>
                     </div>
 
-                    <div className='hidden lg:block  bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
+                    <div className='hidden lg:block  bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-4 lg:px-10 py-6 shadow-lg'>
                         <h2 className='text-xl py-4 font-varela font-semibold'>
                             Amazing Analysis
                         </h2>
@@ -65,7 +65,7 @@ const Testimonials = () => {
                         </div>
                     </div>
 
-                    <div className='hidden lg:block  bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
+                    <div className='hidden lg:block  bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-4 lg:px-10 py-6 shadow-lg'>
                         <h2 className='text-xl py-4 font-varela font-semibold'>
                             Amazing Analysis
                         </h2>

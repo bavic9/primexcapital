@@ -3,8 +3,8 @@ import React from 'react'
 const NewsLetter = () => {
     return (
         <div className='bg-gray-100 py-24'>
-            <div className='w-[80%] m-auto bg-borderColor py-20 px-4 rounded-2xl shadow-2xl'>
-                <h1 className='text-center lg:text-5xl text-3xl text-white font-varela font-semibold leading-normal lg:w-1/3 m-auto '>
+            <div className='w-[90%] m-auto bg-borderColor py-20 px-4 rounded-2xl shadow-2xl'>
+                <h1 className='text-center lg:text-5xl text-2xl text-white font-varela font-semibold leading-normal lg:w-1/3 w-[60%] m-auto '>
                     Subscribe to our newsletter
                 </h1>
                 <div className='flex flex-col lg:flex-row items-center m-auto px-2 mt-8 space-y-6 lg:w-[60%] '>

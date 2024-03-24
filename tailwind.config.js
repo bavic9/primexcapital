@@ -14,9 +14,10 @@ module.exports = {
 
     extend: {
       colors: {
-        blue: '#00A7DD',
-        lightBlue: '#c4e7f3',
-        borderColor: '#06A3DA',
+        // blue: '#00A7DD',
+        blue: '#2E40B1',
+        lightBlue: '#4352AF',
+        borderColor: '#2E40B1',
       },
       fontFamily: {
         lato: "Lato",

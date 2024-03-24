@@ -50,44 +50,44 @@ const Navbar = () => {
 
     return (
         <div
-            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-full  flex justify-between z-50 items-center md:px-16 px-4 py-4 shadow-lg'
-                : ' flex bg-white justify-between items-center md:px-16 px-4 py-4 shadow-lg '}
+            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-full  flex justify-between z-50 items-center md:px-10 px-4 py-3 shadow-lg'
+                : ' flex bg-white justify-between items-center md:px-10 px-4 py-3 shadow-lg '}
         >
             <div
                 onClick={() => { setMenu('Home') }}
                 className='flex items-center gap-[10px]'>
                 <Link to='/'><img className='md:w-48 w-40 md:h-20 h-12 ' src={logoWhite} alt="logo" /></Link>
             </div>
-            <div ref={NavRef} className=' md:flex gap-10 relative fixed menu lg:space-y-0 space-y-8'>
-                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] items-center text-gray-700 text-2xl font-semibold outline-none transition'>
+            <div ref={NavRef} className=' md:flex gap-10 relative menu lg:space-y-0 space-y-8'>
+                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] items-center text-white lg:text-gray-700 text-xl font-semibold outline-none transition'>
                     <li
                         onClick={() => { setMenu('Home') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-14 after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='/'>Home</Link>{menu === 'Home' ? <hr /> : <></>}
                     </li>
                     <li
                         onClick={() => { setMenu('Mentorship Plan') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-14 after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='/mentorship'>Mentorship Plan</Link>{menu === 'Mentorship Plan' ? <hr /> : <></>}
                     </li>
                     <li
                         onClick={() => { setMenu('Fire Calculator') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-14 after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='calculator'>Fire Calculator</Link>{menu === 'Fire Calculator' ? <hr /> : <></>}
                     </li>
                     <li
                         onClick={() => { setMenu('Blog') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-14 after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='/blog'>Blog</Link>{menu === 'Blog' ? <hr /> : <></>}
                     </li>
                     <li
                         onClick={() => { setMenu('FAQs') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-14 after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='/faqs'>FAQs</Link>{menu === 'FAQs' ? <hr /> : <></>}
                     </li>
                 </ul>
@@ -96,13 +96,13 @@ const Navbar = () => {
                         <div
                             onClick={() => { setMenu('Login') }}
                             className='md:mt-0 mt-4'>
-                            <Link onClick={logOut} ><button className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-3 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Logout</button></Link>
+                            <Link onClick={logOut} ><button className='cursor-pointer text-lg font-semibold text-blue border border-blue rounded-full p-2 w-[87px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Logout</button></Link>
                         </div>
                     ) : (
                         <div
                             onClick={() => { setMenu('Login') }}
                             className='md:mt-0 mt-4'>
-                            <Link to='/login'><button className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-3 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Login</button></Link>
+                            <Link to='/login'><button className='cursor-pointer text-lg font-semibold text-blue border border-blue rounded-full p-2 w-[87px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Login</button></Link>
                         </div>
                     )
                 }

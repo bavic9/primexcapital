@@ -7,24 +7,25 @@ import dp from '../Assets/dp.jpg'
 const Testimonials = () => {
 
     useEffect(() => {
-        AOS.init({duration: 2000})
+        AOS.init({ duration: 2000 })
     }, [])
 
 
     return (
-        <div className='w-[90%] lg:space-y-[8rem] space-y-10 py-[6rem] m-auto'>
-            <div className='text-center space-y-10 w-[90%] m-auto' data-aos="fade-up">
-                <h1 className='lg:text-6xl text-5xl font-varela font-semibold'>What our students <span className='text-blue'>says</span></h1>
-                <span className='flex w-[90%] lg:w-[40%] lg:pt-10 m-auto items-center justify-between'>
-                    <span className='w-[45%] lg:w-[47%] h-[4px] rounded-full bg-blue animLine'></span>
+        <div className='w-[95%] lg:space-y-[5rem] space-y-10 py-[6rem] m-auto lg:mt-10'>
+
+            <div className='text-center space-y-10' data-aos="fade-up">
+                <h1 className='md:text-5xl text-3xl w-1/2 md:w-4/5 text-center m-auto font-varela font-semibold'>What our students <span className='text-blue'>says</span></h1>
+                <span className='flex w-[90%] lg:w-[35%] lg:pt-10 m-auto items-center justify-between'>
+                    <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
                     <span className='h-[20px] w-[20px] rounded-full bg-blue'></span>
-                    <span className='w-[45%] lg:w-[47%] h-[4px] rounded-full bg-blue animLine'></span>
+                    <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
                 </span>
             </div>
 
-            <div className='p-4'>
+            <div className='lg:p-4'>
                 <div className='lg:flex items-center justify-around space-y-6 lg:space-y-0 gap-6' data-aos="fade-up">
-                    <div className='border-4 bg-gray-200 w-[80%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
+                    <div className=' bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
                         <h2 className='text-xl py-4 font-varela font-semibold'>
                             Amazing Analysis
                         </h2>
@@ -44,7 +45,7 @@ const Testimonials = () => {
                         </div>
                     </div>
 
-                    <div className='hidden lg:block border-4 bg-gray-200 w-[80%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
+                    <div className='hidden lg:block  bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
                         <h2 className='text-xl py-4 font-varela font-semibold'>
                             Amazing Analysis
                         </h2>
@@ -64,7 +65,7 @@ const Testimonials = () => {
                         </div>
                     </div>
 
-                    <div className='hidden lg:block border-4 bg-gray-200 w-[80%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
+                    <div className='hidden lg:block  bg-gray-50 w-[90%] md:w-[50%] lg:w-[30%] m-auto rounded-2xl px-10 py-6 shadow-lg'>
                         <h2 className='text-xl py-4 font-varela font-semibold'>
                             Amazing Analysis
                         </h2>

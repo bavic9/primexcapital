@@ -9,6 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose.connect("mongodb://127.0.0.1:27017/employee")
+// mongoose.connect("mongodb+srv://bavic97:primexcapital@cluster0.wpntjrm.mongodb.net/employee")
 
 app.post('/login', (req, res) =>{
     const {email, password} = req.body

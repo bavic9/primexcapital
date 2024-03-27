@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { auth } from '../firebase'
 import log from '../Components/Assets/log.svg'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 import { FaLock, FaEnvelope } from "react-icons/fa";
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 
 
@@ -11,22 +13,19 @@ const LogIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
-    
-    
+
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post('http://localhost:3001/login', { email, password })
-            .then(result => {
-                console.log(result)
-                if (result.data === 'Success') {
-                    navigate("/")
-                    window.localStorage.setItem("token", result.data)
-                    window.localStorage.setItem("logs", true)
-                }
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log(userCredential);
+                navigate("/")
             })
-            .catch(error => console.log(error))
-    }
+            .catch((error) => {
+                console.log(error);
+            });
+    };
 
 
 

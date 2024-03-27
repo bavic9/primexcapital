@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { auth } from '../firebase'
 import reg from '../Components/Assets/register.svg'
-import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { FaLock, FaUser, FaEnvelope } from "react-icons/fa";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 
 const LoginSignup = () => {
@@ -14,15 +15,18 @@ const LoginSignup = () => {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
 
+
   const handleSubmit = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3001/signup', { name, lname, email, password })
-      .then(result => {
-        console.log(result)
-        navigate("/login")
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password, name, lname)
+      .then((userCredential) => {
+        console.log(userCredential);
+        navigate("/login");
       })
-      .catch(error => console.log(error))
-  }
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
 
 
@@ -54,7 +58,7 @@ const LoginSignup = () => {
             </button>
           </form>
           <span className="text-center flex gap-2 text-gray-500 text-[15px]">
-            <p>Already have an account?</p> 
+            <p>Already have an account?</p>
             <a href="login.html" className=' text-blue'>
               <Link to='/login'>
                 Login here

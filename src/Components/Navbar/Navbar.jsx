@@ -5,22 +5,37 @@ import logosmb from '../Assets/logosmb.png'
 import { BiMenuAltRight } from 'react-icons/bi'
 import { FaTimes } from "react-icons/fa";
 import { Link } from 'react-router-dom'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { auth } from '../../firebase'
 
 
 const Navbar = () => {
 
+    const [authUser, setAuthUser] = useState(null);
+
+    useEffect(() => {
+        const listen = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setAuthUser(user);
+            } else {
+                setAuthUser(null);
+            }
+        });
+
+        return () => {
+            listen();
+        };
+    }, []);
+
+    const userSignOut = () => {
+        signOut(auth)
+            .then(() => {
+                console.log("sign out successful");
+            })
+            .catch((error) => console.log(error));
+    };
 
 
-    const logOut = () => {
-        window.localStorage.clear()
-        window.location.href = "./login"
-    }
-
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    // const userAuthentication = () => {
-    //     setIsLoggedIn(false)
-    // }
     const [scrolled, setScrolled] = useState(false);
 
 
@@ -50,8 +65,8 @@ const Navbar = () => {
 
     return (
         <div
-            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-screen flex justify-between z-50 items-center md:px-10 px-4 py-3 shadow-lg'
-                : ' flex bg-white justify-between items-center md:px-10 px-4 py-3 shadow-lg w-screen'}
+            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-[100vw] flex justify-between z-50 items-center md:px-10 px-4 py-3 shadow-lg'
+                : ' flex bg-white justify-between items-center md:px-10 px-4 py-3 shadow-lg w-[100vw]'}
         >
             <div
                 onClick={() => { setMenu('Home') }}
@@ -59,7 +74,7 @@ const Navbar = () => {
                 <Link to='/'><img className='md:w-48 w-40 md:h-20 h-12 ' src={logoWhite} alt="logo" /></Link>
             </div>
             <div ref={NavRef} className=' md:flex gap-10 relative menu lg:space-y-0 space-y-8'>
-                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] items-center text-white lg:text-gray-700 text-xl font-semibold outline-none transition'>
+                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] items-center text-gray-700 text-lg font-semibold outline-none transition'>
                     <li
                         onClick={() => { setMenu('Home') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
@@ -76,27 +91,30 @@ const Navbar = () => {
                         onClick={() => { setMenu('Fire Calculator') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
                         after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='calculator'>Fire Calculator</Link>{menu === 'Fire Calculator' ? <hr /> : <></>}
+                        <Link to='/'>Fire Calculator</Link>
+                        {/* {menu === 'Fire Calculator' ? <hr /> : <></>} */}
                     </li>
                     <li
                         onClick={() => { setMenu('Blog') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
                         after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/blog'>Blog</Link>{menu === 'Blog' ? <hr /> : <></>}
+                        <Link to='/'>Blog</Link>
+                        {/* {menu === 'Blog' ? <hr /> : <></>} */}
                     </li>
                     <li
                         onClick={() => { setMenu('FAQs') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
                         after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/faqs'>FAQs</Link>{menu === 'FAQs' ? <hr /> : <></>}
+                        <Link to='/'>FAQs</Link>
+                        {/* {menu === 'FAQs' ? <hr /> : <></>} */}
                     </li>
                 </ul>
                 {
-                    localStorage.getItem("logs") ? (
+                    authUser ? (
                         <div
                             onClick={() => { setMenu('Login') }}
                             className='md:mt-0 mt-4'>
-                            <Link onClick={logOut} ><button className='cursor-pointer text-lg font-semibold text-blue border border-blue rounded-full p-2 w-[87px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Logout</button></Link>
+                            <Link onClick={userSignOut} to='/login'><button className='cursor-pointer text-lg font-semibold text-blue border border-blue rounded-full p-2 w-[87px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Logout</button></Link>
                         </div>
                     ) : (
                         <div

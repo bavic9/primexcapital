@@ -87,13 +87,13 @@ const Navbar = () => {
                         after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='/mentorship'>Mentorship Plan</Link>{menu === 'Mentorship Plan' ? <hr /> : <></>}
                     </li>
-                    <li
+                    {/* <li
                         onClick={() => { setMenu('Fire Calculator') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
                         after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
                         <Link to='/'>Fire Calculator</Link>
-                        {/* {menu === 'Fire Calculator' ? <hr /> : <></>} */}
-                    </li>
+                        {menu === 'Fire Calculator' ? <hr /> : <></>}
+                    </li> */}
                     <li
                         onClick={() => { setMenu('Blog') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 

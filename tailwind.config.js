@@ -22,6 +22,7 @@ module.exports = {
         lato: "Lato",
         varela: 'Varela Round',
         prompt: "Prompt",
+        josefin: "Josefin Sans",
       },
     },
   },

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { auth } from '../firebase'
 import log from '../Components/Assets/log.svg'
 import { Link, useNavigate } from 'react-router-dom'
-// import axios from 'axios'
 import { FaLock, FaEnvelope } from "react-icons/fa";
 import { signInWithEmailAndPassword } from 'firebase/auth'
 

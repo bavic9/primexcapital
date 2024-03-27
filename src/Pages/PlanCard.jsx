@@ -1,5 +1,10 @@
-
+import { onAuthStateChanged } from 'firebase/auth';
+import React, { useEffect, useState } from 'react'
+import { auth } from '../firebase'
 import { Link } from 'react-router-dom'
+
+
+
 export const PlanCard = ({
     title,
     price,
@@ -10,6 +15,24 @@ export const PlanCard = ({
     content4,
     content5,
     icon }) => {
+
+
+
+    const [authUser, setAuthUser] = useState(false);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setAuthUser(user);
+            } else {
+                setAuthUser(null);
+            }
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
 
     return (
         <div className="max-w-[1140px] m-auto py-4 lg:w-[30%] md:w-[400px]">
@@ -40,11 +63,28 @@ export const PlanCard = ({
                     </div>
                 </div>
                 <div className="flex justify-center py-4">
-                    <Link to={'/payment'}>
+
+                    {/* <Link to={'/payment'}>
                         <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 transition ease-in-out duration-30 text-white hover:shadow-lg'>
                             Get Started
                         </button>
-                    </Link>
+                    </Link> */}
+
+                    {
+                        authUser ? (
+                            <Link to={'/payment'}>
+                                <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                                    Get Started
+                                </button>
+                            </Link>
+                        ) : (
+                            <Link to={'/login'}>
+                                <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                                    Get Started
+                                </button>
+                            </Link>
+                        )
+                    }
                 </div>
             </div>
         </div>

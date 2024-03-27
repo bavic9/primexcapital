@@ -11,7 +11,7 @@ import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer';
 import Payment from './Pages/Payment';
 import Login from './Pages/Login';
-import PrivateRoutes from './utils/PrivateRoutes';
+// import PrivateRoutes from './utils/PrivateRoutes';
 
 function App() {
 
@@ -31,9 +31,10 @@ function App() {
           <Route path='/calculator' element={<FireCal category='fire' />} />
           <Route path='/blog' element={<Blog category='blogs' />} />
           <Route path='/faqs' element={<Faqs category='faq' />} />
-          <Route element={<PrivateRoutes />}>
+          <Route path='/payment' element={<Payment category='pay' />} />
+          {/* <Route element={<PrivateRoutes />}>
             <Route path='/payment' element={<Payment category='pay' />} />
-          </Route>
+          </Route> */}
         </Routes>
         <Footer />
       </BrowserRouter>

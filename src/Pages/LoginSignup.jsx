@@ -54,7 +54,7 @@ const LoginSignup = () => {
               <input className='text-base h-full w-4/5 bg-none border-none px-6 outline-none' type="password" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} required />
             </div>
             <button type='submit' className='cursor-pointer text-xl font-semibold text-blue border border-blue rounded-full p-3 w-[137px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>
-              <Link to='/login'>Submit</Link>
+              Submit
             </button>
           </form>
           <span className="text-center flex gap-2 text-gray-500 text-[15px]">

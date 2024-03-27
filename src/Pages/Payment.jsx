@@ -6,10 +6,6 @@ import 'aos/dist/aos.css'
 
 const Payment = () => {
 
-    // if (!authorized) {
-    //     return <Redirect to="/login"/>
-    // }
-
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
@@ -52,15 +48,15 @@ const Payment = () => {
                 <form action="" id='paymentForm' className='py-10 space-y-8'>
                     <div className='flex justify-center items-center gap-10'>
                         <label htmlFor="email" className='text-xl font-varela'>Email:</label>
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} id='email-address' className=' border-2 p-2' />
+                        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} id='email-address' className=' border-2 p-2' />
                     </div>
                     <div className='flex justify-center items-center gap-5'>
                         <label htmlFor="amount" className='text-xl font-varela'>Amount:</label>
-                        <input type="tel" id='amount' value={amount} onChange={(e) => setAmount(e.target.value)} className=' border-2 p-2' />
+                        <input type="tel" id='amount' placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} className=' border-2 p-2' />
                     </div>
                     <div className='flex justify-start items-center gap-10'>
                         <label htmlFor="name" className=' text-xl font-varela'>Name:</label>
-                        <input type="name" id='name' value={name} onChange={(e) => setName(e.target.value)} className=' border-2 p-2' />
+                        <input type="name" id='name' placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className=' border-2 p-2' />
                     </div>
                     <div className="flex justify-center py-4">
                         <button 

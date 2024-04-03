@@ -73,13 +73,13 @@ export const PlanCard = ({
                     {
                         authUser ? (
                             <Link to={'/payment'}>
-                                <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                                <button className='cursor-pointer md:text-lg text-base font-semibold  bg-blue hover:text-blue hover:bg-transparent border border-blue rounded-lg px-5 py-2 transition ease-in-out duration-30 text-white hover:shadow-lg'>
                                     Get Started
                                 </button>
                             </Link>
                         ) : (
                             <Link to={'/login'}>
-                                <button className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                                <button className='cursor-pointer md:text-lg text-base font-semibold  bg-blue hover:text-blue hover:bg-transparent border border-blue rounded-lg px-5 py-2 transition ease-in-out duration-30 text-white hover:shadow-lg'>
                                     Get Started
                                 </button>
                             </Link>

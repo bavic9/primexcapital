@@ -75,18 +75,22 @@ const Navbar = () => {
             </div>
             <div ref={NavRef} className=' md:flex gap-10 relative menu lg:space-y-0 space-y-8'>
                 <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] items-center text-gray-700 text-lg font-semibold outline-none transition'>
-                    <li
-                        onClick={() => { setMenu('Home') }}
-                        className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/'>Home</Link>{menu === 'Home' ? <hr /> : <></>}
-                    </li>
-                    <li
-                        onClick={() => { setMenu('Mentorship Plan') }}
-                        className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/mentorship'>Mentorship Plan</Link>{menu === 'Mentorship Plan' ? <hr /> : <></>}
-                    </li>
+                    <Link to='/'>
+                        <li
+                            onClick={() => { setMenu('Home') }}
+                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
+                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                            Home{menu === 'Home' ? <hr /> : <></>}
+                        </li>
+                    </Link>
+                    <Link to='/mentorship'>
+                        <li
+                            onClick={() => { setMenu('Mentorship Plan') }}
+                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
+                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                            Mentorship Plan{menu === 'Mentorship Plan' ? <hr /> : <></>}
+                        </li>
+                    </Link>
                     {/* <li
                         onClick={() => { setMenu('Fire Calculator') }}
                         className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
@@ -94,20 +98,24 @@ const Navbar = () => {
                         <Link to='/'>Fire Calculator</Link>
                         {menu === 'Fire Calculator' ? <hr /> : <></>}
                     </li> */}
-                    <li
-                        onClick={() => { setMenu('Blog') }}
-                        className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/'>Blog</Link>
-                        {/* {menu === 'Blog' ? <hr /> : <></>} */}
-                    </li>
-                    <li
-                        onClick={() => { setMenu('FAQs') }}
-                        className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/'>FAQs</Link>
-                        {/* {menu === 'FAQs' ? <hr /> : <></>} */}
-                    </li>
+                    <Link to='/'>
+                        <li
+                            onClick={() => { setMenu('Blog') }}
+                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
+                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                            Blog
+                            {/* {menu === 'Blog' ? <hr /> : <></>} */}
+                        </li>
+                    </Link>
+                    <Link to='/'>
+                        <li
+                            onClick={() => { setMenu('FAQs') }}
+                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
+                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
+                            FAQs
+                            {/* {menu === 'FAQs' ? <hr /> : <></>} */}
+                        </li>
+                    </Link>
                 </ul>
                 {
                     authUser ? (
@@ -143,5 +151,8 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
 
 

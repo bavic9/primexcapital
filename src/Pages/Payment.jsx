@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 import PaystackPop from '@paystack/inline-js'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { useNavigate } from 'react-router-dom'
+// require ('dotenv').config()
 
 
 const Payment = () => {
+
+    // console.log(process.env)
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
@@ -13,6 +17,7 @@ const Payment = () => {
     const [email, setEmail] = useState("")
     const [amount, setAmount] = useState("")
     const [name, setName] = useState("")
+    const navigate = useNavigate()
 
     const payWithPaystack = (e) => {
         e.preventDefault()
@@ -25,6 +30,7 @@ const Payment = () => {
             onSuccess(transaction){
                 let message = `Payment Complete! Reference ${transaction.reference}`
                 alert(message)
+                navigate("/")
             },
             onCancel(){
                 alert('You have Canceled the transaction')
@@ -33,8 +39,8 @@ const Payment = () => {
     }
 
     return (
-        <div className=' py-20 lg:py-20 h-[80vh]'>
-            <div className='text-center space-y-10' data-aos="fade-up">
+        <div className='flex flex-col justify-center items-center w-[90vw] m-auto'>
+            <div className='text-center space-y-2 w-full' data-aos="fade-up">
                 <h1 className='md:text-5xl text-3xl w-1/2 md:w-4/5 text-center m-auto font-varela font-semibold'>Make <span className='text-blue'>Payment</span></h1>
                 <span className='flex w-[90%] lg:w-[35%] lg:pt-10 m-auto items-center justify-between'>
                     <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
@@ -44,7 +50,7 @@ const Payment = () => {
             </div>
 
 
-            <div className=' flex flex-col justify-center m-auto items-center w-[80%] p-6 mt-10'>
+            <div className=' flex flex-col justify-center m-auto items-center w-[80%] p-6'>
                 <form action="" id='paymentForm' className='py-10 space-y-8'>
                     <div className='flex justify-center items-center gap-10'>
                         <label htmlFor="email" className='text-xl font-varela'>Email:</label>

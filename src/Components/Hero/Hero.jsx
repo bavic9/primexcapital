@@ -43,7 +43,7 @@ const Hero = () => {
                         Evaluate your trading journey & network with like minds and expert traders
                     </p>
                     <div className='flex lg:justify-start justify-center gap-3 items-center md:space-x-6 py-6'>
-                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-5 lg:px-10 py-5 hover:text-white hover:bg-blue'>
+                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-5 lg:px-10 py-3 hover:text-white hover:bg-blue'>
                             Join Free Classes
                         </button>
 
@@ -53,12 +53,12 @@ const Hero = () => {
 
                         {
                             authUser ? (
-                                <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-5 hover:text-white hover:bg-blue'>
+                                <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-3 hover:text-white hover:bg-blue'>
                                     Enroll Now
                                 </button>
                             ) : (
                                 <Link to={'/login'}>
-                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-5 hover:text-white hover:bg-blue'>
+                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-3 hover:text-white hover:bg-blue'>
                                         Enroll Now
                                     </button>
                                 </Link>
@@ -69,10 +69,11 @@ const Hero = () => {
 
 
                 {/* hero right */}
-                <div className='lg:w-1/2' data-aos="fade-left">
+                <div className='lg:w-1/2 pb-10 lg:pb-0' data-aos="fade-left">
                     <img
                         className=''
-                        src={hero} alt="" />
+                        src={hero} alt="" 
+                    />
                 </div>
             </div>
 

@@ -3,7 +3,8 @@ import React from 'react'
 const NewsLetter = () => {
     return (
         <div className='bg-gray-100 py-24'>
-            <div className='w-[90%] m-auto bg-borderColor py-20 px-4 rounded-2xl shadow-2xl'>
+            <div className='w-[90%] m-auto bg-blue py-20 px-4 rounded-2xl shadow-2xl relative z-10'>
+                <div className='bg-borderColor rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] h-[200px] w-[200px] absolute animate-moveR -z-10'></div>
                 <h1 className='text-center lg:text-5xl text-2xl text-white font-varela font-semibold leading-normal lg:w-1/3 w-[60%] m-auto '>
                     Subscribe to our newsletter
                 </h1>
@@ -13,6 +14,7 @@ const NewsLetter = () => {
                         Subscribe Now
                     </button>
                 </div>
+                <div className='bg-borderColor rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] h-[200px] w-[200px] absolute bottom-10 right-10 animate-move -z-10'></div>
             </div>
         </div>
     )

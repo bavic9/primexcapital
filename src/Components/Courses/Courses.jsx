@@ -17,7 +17,7 @@ const Courses = () => {
                     <h1 className='text-4xl md:text-6xl font-bold font-varela text-center leading-normal lg:text-left text-black'>
                         <span className='text-blue '>Free</span> A-Z Courses on FX Trading from Beginner to Advance
                     </h1>
-                    <button className='rounded-lg lg:w-[40%] m-auto lg:m-0 ease-out duration-500 hover:shadow-lg border border-blue text-white bg-blue font-varela font-semibold md:text-xl text-lg px-6 lg:px-8 py-5 hover:text-blue hover:bg-white'>
+                    <button className='rounded-lg lg:w-fit m-auto lg:m-0 ease-out duration-500 hover:shadow-lg border border-blue text-white bg-blue font-varela font-semibold md:text-xl text-lg px-3 lg:px-4 py-3 hover:text-blue hover:bg-white'>
                         View Courses
                     </button>
                 </div>

@@ -29,8 +29,8 @@ const LogIn = () => {
 
 
     return (
-        <div className="flex justify-center items-center lg:py-20 lg:h-[75vh] h-[90vh] w-[100vw] ">
-            <div className='flex flex-col lg:flex-row-reverse  justify-center items-center w-full lg:w-fit h-full'>
+        <div className="flex justify-center items-center m-auto w-[100vw] ">
+            <div className='flex gap-4 flex-col lg:flex-row-reverse  justify-center items-center w-full lg:w-fit h-full'>
                 <div className="lg:p-16 p-8 flex items-center justify-center flex-col lg:w-1/2 w-full space-y-6 animateOpacity">
                     <form action="#" onSubmit={handleSubmit} className="flex items-center justify-center flex-col overflow-hidden w-full lg:space-y-4 space-y-8">
                         <h2 className="text-[2.2rem] text-blue mb-2.5 font-varela font-semibold">Sign in</h2>

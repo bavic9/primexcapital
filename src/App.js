@@ -22,21 +22,23 @@ function App() {
   return (
     <div className="">
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/signup' element={<LoginSignup />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/' element={<Home />} />
-          <Route path='/mentorship' element={<Mentorship />} />
-          <Route path='/calculator' element={<FireCal category='fire' />} />
-          <Route path='/blog' element={<Blog category='blogs' />} />
-          <Route path='/faqs' element={<Faqs category='faq' />} />
-          <Route path='/payment' element={<Payment category='pay' />} />
-          {/* <Route element={<PrivateRoutes />}>
+        <div className='flex min-h-screen flex-col'>
+          <Navbar />
+          <Routes>
+            <Route path='/signup' element={<LoginSignup />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/mentorship' element={<Mentorship />} />
+            <Route path='/calculator' element={<FireCal category='fire' />} />
+            <Route path='/blog' element={<Blog category='blogs' />} />
+            <Route path='/faqs' element={<Faqs category='faq' />} />
             <Route path='/payment' element={<Payment category='pay' />} />
-          </Route> */}
-        </Routes>
-        <Footer />
+            {/* <Route element={<PrivateRoutes />}>
+              <Route path='/payment' element={<Payment category='pay' />} />
+            </Route> */}
+          </Routes>
+          <Footer />
+        </div>
       </BrowserRouter>
     </div>
   );

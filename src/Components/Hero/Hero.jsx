@@ -35,7 +35,7 @@ const Hero = () => {
             <div className=' w-[90%] m-auto py-16 lg:py-0 flex flex-col lg:flex-row items-center justify-around animationUp'>
                 {/* hero left */}
                 <div className='lg:w-full lg:pl-24 lg:m-auto px-4 lg:px-0  ' data-aos="fade-up">
-                    <h1 className='text-white font-josefinlg:text-6xl text-5xl font-bold uppercase text-start lg:text-left lg:p-0'>
+                    <h1 className='text-white font-josefin lg:text-6xl text-5xl font-bold uppercase text-start lg:text-left lg:p-0'>
                         Learn to trade like a pro in no time
                         {/* <div className='curved-line'></div> */}
                     </h1>

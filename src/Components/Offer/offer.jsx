@@ -16,9 +16,9 @@ const Offer = () => {
 
             {/* left flex */}
             <div className='flex flex-col py-4 lg:py-0 px-2 space-y-2 lg:space-y-0 w-full font-prompt'>
-                <h1 className=' text-blue font-bold text-5xl lg:text-6xl'>Over 701,463+</h1>
-                <h1 className='  w-4/5 text-5xl lg:text-6xl font-bold tracking-widest lg:tracking-wider text-start'>Traders Worldwide Trust Priceaction - Now It’s Your Turn</h1>
-                <p className=' text-3xl py-3'>Your search for consistent profitability from trading ends here ….</p>
+                <h1 className=' text-blue font-bold text-4xl lg:text-6xl'>Over 701,463+</h1>
+                <h1 className='  w-4/5 text-4xl lg:text-6xl font-bold tracking-widest lg:tracking-wider text-start'>Traders Worldwide Trust Priceaction - Now It’s Your Turn</h1>
+                <p className='  text-2xl lg:text-3xl py-3'>Your search for consistent profitability from trading ends here ….</p>
                 <div className='flex flex-col space-y-4 pt-3'>
                     <div className='flex justify-start items-center space-x-3 lg:space-x-2'>
                         <FaDotCircle className=' text-blue text-xl'/>

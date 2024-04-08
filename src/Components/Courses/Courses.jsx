@@ -21,8 +21,8 @@ const Courses = () => {
 
     return (
         <div className=' bg-slate-200 py-20'>
-            <div className='px-6 lg:px-32'>
-                <h1 className=' text-5xl lg:text-7xl text-center font-extrabold font-lato py-4'>We Are Here To Help You <span className='text-blue'>Fulfill And Reach All Of Your Trading Goals</span></h1>
+            <div className='px-4 lg:px-32'>
+                <h1 className=' text-3xl lg:text-7xl text-center font-extrabold font-lato py-4'>We Are Here To Help You <span className='text-blue'>Fulfill And Reach All Of Your Trading Goals</span></h1>
 
                 {/* grid box */}
                 <div className=' grid lg:grid-cols-3 py-16 gap-8'>
@@ -82,23 +82,23 @@ const Courses = () => {
 
 
 
-            <div className='px-6 lg:px-32 pt-8'>
-                <h1 className=' text-5xl lg:text-7xl text-center font-extrabold font-lato py-4'>We Have Been <span className='text-blue'>Using Them Profitably For Years</span></h1>
+            <div className='px-3 lg:px-32 pt-8'>
+                <h1 className=' text-3xl lg:text-7xl text-center font-extrabold font-lato py-4'>We Have Been <span className='text-blue'>Using Them Profitably For Years</span></h1>
 
                 {/* grid box */}
                 <div className=' grid lg:grid-cols-2 py-16 gap-8'>
-                    <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 ' >
+                    <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
                         <img className='w-[200px] m-auto' src={sig} alt="" />
-                        <h2 className='text-3xl font-bold w-4/5 pt-2'>PXC Pro Signals Indicator</h2>
+                        <h2 className='text-3xl font-bold pt-2'>PXC Pro Signals Indicator</h2>
                         <p className='text-xl font-light'>
                             <span className='font-bold'>Even If you can't read the charts, you can too grab the market opportunities with our simple but powerful Pro Signal Indicator</span> Get 
                             instant access to a simple and proven indicator that has transformed HUNDREDS of beginner traders into a "Expert Day TRADER"
                         </p>
                         <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Buy Now</button>
                     </div>
-                    <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 ' >
+                    <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
                         <img className='w-[300px] m-auto' src={phone} alt="" />
-                        <h2 className='text-3xl font-bold w-4/5 pt-2'>PXC VIP Signals</h2>
+                        <h2 className='text-3xl font-bold pt-2'>PXC VIP Signals</h2>
                         <p className='text-2xl font-bold'>
                             Do Not Miss or Delay Entry/exit of Any Trade From Telegram Again!
                         </p>
@@ -107,9 +107,9 @@ const Courses = () => {
                         </p>
                         <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Buy Now</button>
                     </div>
-                    <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 ' >
+                    <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
                         <img className='w-[300px] m-auto' src={book} alt="" />
-                        <h2 className='text-3xl font-bold w-4/5 pt-2'>The Complete Gide To Forex Trading</h2>
+                        <h2 className='text-3xl font-bold pt-2'>The Complete Gide To Forex Trading</h2>
                         <p className='text-2xl font-bold'>
                             Master the Market With Confidence, Discipline, and a Winning Attitude.
                         </p>

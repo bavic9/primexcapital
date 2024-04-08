@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Hero.css'
-import hero from '../Assets/btc.png'
+import hero from '../Assets/hb.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { onAuthStateChanged } from 'firebase/auth';
@@ -31,21 +31,21 @@ const Hero = () => {
     }, [])
 
     return (
-        <section className=''>
-            <div className='m-auto lg:px-10 pt-10 lg:pt-16 lg:py-16 flex flex-col lg:justify-around justify-center lg:flex-row items-center space-y-16 lg:space-y-0 animationUp'>
+        <section className='flex justify-center lg:min-h-[90vh]'>
+            <div className=' w-[90%] m-auto py-16 lg:py-0 flex flex-col lg:flex-row items-center justify-around animationUp'>
                 {/* hero left */}
-                <div className='lg:w-1/2 md:p-16 lg:m-auto ' data-aos="fade-right">
-                    <h1 className='text-white font-josefin px-4 lg:px-0 lg:text-6xl text-4xl font-semibold text-center lg:text-left lg:p-0'>
-                        This is <span className='text-blue'>PRIME X CAPITAL</span> where you learn to trade like a pro in no time
-                        <div className='curved-line'></div>
+                <div className='lg:w-full lg:pl-24 lg:m-auto px-4 lg:px-0  ' data-aos="fade-up">
+                    <h1 className='text-white font-josefinlg:text-6xl text-5xl font-bold uppercase text-start lg:text-left lg:p-0'>
+                        Learn to trade like a pro in no time
+                        {/* <div className='curved-line'></div> */}
                     </h1>
-                    <p className=' lg:w-2/3 w-4/5 m-auto lg:m-0 text-gray-500 text-center lg:text-start text-lg md:text-2xl font-varela py-6'>
+                    <p className=' lg:w-[90%] m-auto lg:m-0 text-slate-400 text-start uppercase lg:text-start text-xl md:text-2xl font-josefin py-6'>
                         Evaluate your trading journey & network with like minds and expert traders
                     </p>
-                    <div className='flex lg:justify-start justify-center gap-3 items-center md:space-x-6 py-6'>
-                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-5 lg:px-10 py-3 hover:text-white hover:bg-blue'>
+                    <div className='flex justify-start gap-3 items-center md:space-x-6 py-6'>
+                        {/* <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-5 lg:px-10 py-3 hover:text-white hover:bg-blue'>
                             Join Free Classes
-                        </button>
+                        </button> */}
 
                         {/* <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-5 hover:text-white hover:bg-blue'>
                             Enroll Now
@@ -53,13 +53,13 @@ const Hero = () => {
 
                         {
                             authUser ? (
-                                <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-3 hover:text-white hover:bg-blue'>
-                                    Enroll Now
+                                <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
+                                    Join Telegram Channel
                                 </button>
                             ) : (
                                 <Link to={'/login'}>
-                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-3 hover:text-white hover:bg-blue'>
-                                        Enroll Now
+                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
+                                        Join Telegram Channel
                                     </button>
                                 </Link>
                             )
@@ -69,9 +69,9 @@ const Hero = () => {
 
 
                 {/* hero right */}
-                <div className='lg:w-1/2 pb-10 lg:pb-0' data-aos="fade-left">
+                <div className='lg:w-full lg:pb-10' data-aos="fade-up">
                     <img
-                        className=''
+                        className='lg:w-[80%]'
                         src={hero} alt="" 
                     />
                 </div>

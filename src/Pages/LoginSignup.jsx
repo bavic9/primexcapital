@@ -32,7 +32,7 @@ const LoginSignup = () => {
 
 
   return (
-    <div className="flex justify-center items-center m-auto w-[100vw] ">
+    <div className="flex justify-center items-center m-auto my-20 w-[100vw] ">
       <div className='flex flex-col lg:flex-row  justify-center items-center w-full lg:w-fit h-full'>
         <div className="lg:p-16 p-8 flex items-center justify-center flex-col lg:w-1/2 w-full space-y-6 animateOpacity">
           <form action="#" onSubmit={handleSubmit} className="flex items-center justify-center flex-col overflow-hidden w-full lg:space-y-4 space-y-8">

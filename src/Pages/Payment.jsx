@@ -37,7 +37,7 @@ const Payment = () => {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center w-[90vw] m-auto'>
+        <div className='flex flex-col justify-center items-center w-[90vw] m-auto my-20'>
             <div className='text-center mt-10 space-y-2 w-full'>
                 <h1 className='md:text-5xl text-3xl w-1/2 md:w-4/5 text-center m-auto font-varela font-semibold'>Make <span className='text-blue'>Payment</span></h1>
                 <span className='flex w-[90%] lg:w-[35%] lg:pt-10 m-auto items-center justify-between'>

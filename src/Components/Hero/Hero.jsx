@@ -53,14 +53,18 @@ const Hero = () => {
 
                         {
                             authUser ? (
-                                <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
-                                    Join Telegram Channel
-                                </button>
-                            ) : (
-                                <Link to={'/login'}>
+                                <a href="https://t.me/primexcapital" target='blank'>
                                     <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
                                         Join Telegram Channel
                                     </button>
+                                </a>
+                            ) : (
+                                <Link to={'/login'}>
+                                    <a href="https://t.me/primexcapital" target='blank'>
+                                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
+                                            Join Telegram Channel
+                                        </button>
+                                    </a>
                                 </Link>
                             )
                         }

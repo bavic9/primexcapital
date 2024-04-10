@@ -201,14 +201,14 @@ const Mentorship = () => {
             }}
             className={
               bg === "Synthetics"
-                ? "border rounded-e-full border-blue bg-blue px-0 lg:px-6 text-white text-center w-1/2 md:text-3xl text-lg font-bold"
-                : "border rounded-e-full border-blue text-center px-0 lg:px-6 w-1/2 md:text-3xl text-lg font-bold"
+                ? "border rounded-e-full border-blue bg-blue px-0 lg:px-6 text-white text-center w-1/2 md:text-3xl text-base font-bold"
+                : "border rounded-e-full border-blue text-center px-0 lg:px-6 w-1/2 md:text-3xl text-base font-bold"
             }
           >
             <div className={
               activeLink === 'tab3'
-                ? 'py-6'
-                : 'py-6'
+                ? 'py-[1.6rem] lg:py-6'
+                : 'py-[1.6rem] lg:py-6'
             }
               eventKey="third"
               onClick={() => {

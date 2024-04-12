@@ -4,7 +4,7 @@ import 'aos/dist/aos.css'
 import heroImg from '../Assets/forex.jpeg'
 import time from '../Assets/time.png'
 import sig from '../Assets/signal-book.webp'
-import phone from '../Assets/Trade_Copier_copy.png.webp'
+import phone from '../Assets/sigCopier.svg'
 import book from '../Assets/ebook_copy.png.webp'
 import phone2 from '../Assets/phone.png'
 import target from '../Assets/accuracy.webp'
@@ -97,7 +97,7 @@ const Courses = () => {
                         <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Buy Now</button>
                     </div>
                     <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
-                        <img className='w-[300px] m-auto' src={phone} alt="" />
+                        <img className='w-[200px] m-auto' src={phone} alt="" />
                         <h2 className='text-3xl font-bold pt-2'>PXC VIP Signals</h2>
                         <p className='text-2xl font-bold'>
                             Do Not Miss or Delay Entry/exit of Any Trade From Telegram Again!
@@ -108,7 +108,7 @@ const Courses = () => {
                         <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Buy Now</button>
                     </div>
                     <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
-                        <img className='w-[300px] m-auto' src={book} alt="" />
+                        <img className='w-[250px] m-auto' src={book} alt="" />
                         <h2 className='text-3xl font-bold pt-2'>The Complete Gide To Forex Trading</h2>
                         <p className='text-2xl font-bold'>
                             Master the Market With Confidence, Discipline, and a Winning Attitude.

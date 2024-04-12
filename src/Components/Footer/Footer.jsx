@@ -6,11 +6,11 @@ import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter, FaYoutube, FaTelegram} f
 const Footer = () => {
     return (
         <div className=' bg-gray-950 px-10 mt-auto w-full py-6'>
-            <div className='w-fit text-white m-auto grid lg:grid-cols-[repeat(4,1fr)] md:grid-cols-[repeat(3,1fr)] grid-cols-[repeat(2,1fr)] lg:gap-80 gap-x-20 p-4 pb-10'>
+            <div className='w-fit text-white lg:m-auto grid lg:grid-cols-[repeat(4,1fr)] md:grid-cols-[repeat(3,1fr)] grid-cols-[repeat(1,1fr)] lg:gap-80 gap-x-20 p-4 pb-10'>
                 <div className='flex mt-20 flex-col'>
                     <img className='w-[55px]' src={logo} alt="" />
                 </div>
-                <div className='flex flex-col items-center w-fit'>
+                <div className='flex flex-col lg:items-center w-fit'>
                     <h5 className='mt-8 text-2xl text-orange text-center'>Support</h5>
                     <span className='w-[30px] border-b-orange mx-0 my-4 border-b-4 border-solid'></span>
                     <div className='flex flex-col'>
@@ -20,7 +20,7 @@ const Footer = () => {
                         <a href='/'>FAQ</a>
                     </div>
                 </div>
-                <div className='flex flex-col items-center w-fit'>
+                <div className='flex flex-col lg:items-center w-fit'>
                     <h5 className='mt-8 text-2xl text-orange'>Company</h5>
                     <span className='w-[30px] border-b-orange mx-0 my-4 border-b-4 border-solid'> </span>
                     <div className='flex flex-col'>
@@ -30,10 +30,10 @@ const Footer = () => {
                         <a href='/'>Privacy</a>
                     </div>
                 </div>
-                <div className='flex flex-col items-center w-fit'>
+                <div className='flex flex-col lg:items-center w-fit'>
                     <h5 className='mt-8 text-2xl text-orange'>Socials</h5>
                     <span className='w-[30px] border-b-orange mx-0 my-4 border-b-4 border-solid'> </span>
-                    <div className='grid grid-cols-3 gap-2 w-fit'>
+                    <div className='grid grid-cols-3 gap-4 w-fit'>
                         <a href="https://x.com/Prime_x_capital?t=3JHg2WNpMJhStizWAqqkOQ&s=08" target='blank' className='p-2 rounded-full w-fit border border-white transition duration-300 ease-in cursor-pointer hover:bg-white hover:text-gray-950'>
                             <FaTwitter className='text-xl' />
                         </a>

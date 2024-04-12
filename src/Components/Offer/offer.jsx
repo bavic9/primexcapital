@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { FaDotCircle } from "react-icons/fa";
-import phone from '../Assets/phone.webp'
+import phone from '../Assets/offerPhone.svg'
 
 const Offer = () => {
 
@@ -21,23 +21,23 @@ const Offer = () => {
                 <p className='  text-2xl lg:text-3xl py-3'>Your search for consistent profitability from trading ends here ….</p>
                 <div className='flex flex-col space-y-4 pt-3'>
                     <div className='flex justify-start items-center space-x-3 lg:space-x-2'>
-                        <FaDotCircle className=' text-blue text-xl'/>
+                        <FaDotCircle className=' text-blue text-xl lg:text-2xl'/>
                         <p className='text-xl lg:text-2xl'>Leverage the 12+ years of trading experience of our traders.</p>
                     </div>
                     <div className='flex justify-start items-center space-x-3 lg:space-x-2'>
-                        <FaDotCircle className=' text-blue text-xl'/>
+                        <FaDotCircle className=' text-blue text-xl lg:text-2xl'/>
                         <p className='text-xl lg:text-2xl'>Learn our proven and powerful trading strategies.</p>
                     </div>
                     <div className='flex justify-start items-center space-x-3 lg:space-x-2'>
-                        <FaDotCircle className=' text-blue text-xl'/>
+                        <FaDotCircle className=' text-blue text-xl lg:text-2xl'/>
                         <p className='text-xl lg:text-2xl'>Enhance your trading knowledge with free trading analysis.</p>
                     </div>
                     <div className='flex justify-start items-center space-x-3 lg:space-x-2'>
-                        <FaDotCircle className=' text-blue text-xl'/>
+                        <FaDotCircle className=' text-blue text-xl lg:text-2xl'/>
                         <p className='text-xl lg:text-2xl'>Get free Forex, Indices, Commodities, Stocks, Scalping signals.</p>
                     </div>
                     <div className='flex justify-start items-center space-x-3 lg:space-x-2'>
-                        <FaDotCircle className=' text-blue text-xl'/>
+                        <FaDotCircle className=' text-blue text-xl lg:text-2xl'/>
                         <p className='text-xl lg:text-2xl'>Chat 24/7 with our team for any trade assistance.</p>
                     </div>
                 </div>

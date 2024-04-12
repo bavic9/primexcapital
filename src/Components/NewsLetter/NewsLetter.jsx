@@ -1,4 +1,9 @@
 import React from 'react'
+import bybit from '../Assets/bybit.svg'
+import exness from '../Assets/exness.png'
+import deriv from '../Assets/derive.png'
+import tradingview from '../Assets/tradingview.png'
+import fxtm from '../Assets/fxtm.png'
 
 const NewsLetter = () => {
     return (
@@ -15,6 +20,22 @@ const NewsLetter = () => {
                     </button>
                 </div>
                 <div className='bg-borderColor rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] h-[200px] w-[200px] absolute bottom-10 right-10 animate-move -z-10'></div>
+            </div>
+
+
+
+
+
+
+            <div className='w-4/5 m-auto flex flex-col items-center space-y-6 mt-20 lg:mt-40'>
+                <p className='md:text-2xl text-xl font-bold text-black'>For trading we use:</p>
+                <div className='flex flex-col lg:flex-row justify-between w-full items-center'>
+                    <img className='lg:w-[150px] w-[100px]' src={bybit} alt="" />
+                    <img className='lg:w-[150px] w-[100px]' src={exness} alt="" />
+                    <img className='lg:w-[150px] w-[100px]' src={deriv} alt="" />
+                    <img className='lg:w-[150px] w-[100px]' src={tradingview} alt="" />
+                    <img className='lg:w-[150px] w-[100px]' src={fxtm} alt="" />
+                </div>
             </div>
         </div>
     )

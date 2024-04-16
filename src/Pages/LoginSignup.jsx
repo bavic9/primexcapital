@@ -67,8 +67,8 @@ const LoginSignup = () => {
           </span>
         </div>
 
-        <div className='lg:w-1/2 lg:h-[60vh] overflow-hidden bg-blue rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] shadow animate-heart'>
-          <div className="h-full hidden lg:flex justify-center">
+        <div className='lg:w-1/2 lg:h-[60vh]'>
+          <div className="h-full hidden lg:flex justify-center overflow-hidden bg-blue rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] shadow animate-heart">
             <img src={reg} className=" w-3/5" alt="" />
           </div>
         </div>

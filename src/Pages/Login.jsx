@@ -11,6 +11,7 @@ const LogIn = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [status, setStatus] = useState({});
     const navigate = useNavigate()
 
 
@@ -23,6 +24,10 @@ const LogIn = () => {
             })
             .catch((error) => {
                 console.log(error);
+                // alert('wrong credentials')
+                setStatus({
+                    success: false, message: 'Your details are incorrect, please try again'
+                });
             });
     };
 
@@ -34,6 +39,12 @@ const LogIn = () => {
                 <div className="lg:p-16 p-8 flex items-center justify-center flex-col lg:w-1/2 w-full space-y-6 animateOpacity">
                     <form action="#" onSubmit={handleSubmit} className="flex items-center justify-center flex-col overflow-hidden w-full lg:space-y-4 space-y-8">
                         <h2 className="text-[2.2rem] text-blue mb-2.5 font-varela font-semibold">Sign in</h2>
+                        {
+                            status.message &&
+                            <div className=''>
+                                <p className={status.success === false ? " text-red-500 text-xl md:text-2xl text-center font-josefin font-semibold" : ""}>{status.message}</p>
+                            </div>
+                        }
                         <div className=" border-2 text-xl max-w-[380px] w-full h-[55px] rounded-full flex items-center justify-center">
                             <FaEnvelope />
                             <input className='text-base h-full w-4/5 bg-none border-none px-6 outline-none' type="email" placeholder="Email" onChange={(e) => { setEmail(e.target.value) }} required />
@@ -54,10 +65,11 @@ const LogIn = () => {
                             </Link>
                         </a>
                     </span>
+
                 </div>
 
-                <div className='lg:w-1/2 lg:h-[60vh] overflow-hidden bg-blue rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] shadow animate-heart'>
-                    <div className="h-full hidden lg:flex justify-center">
+                <div className='lg:w-1/2 lg:h-[60vh]'>
+                    <div className="h-full hidden lg:flex overflow-hidden justify-center bg-blue rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] shadow animate-heart">
                         <img src={log} className=" w-3/5" alt="" />
                     </div>
                 </div>

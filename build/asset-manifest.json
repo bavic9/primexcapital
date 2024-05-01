@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.e20015db.css",
-    "main.js": "/static/js/main.1c925b1c.js",
+    "main.css": "/static/css/main.a1e61720.css",
+    "main.js": "/static/js/main.fc681ce1.js",
     "static/js/453.246f3b0c.chunk.js": "/static/js/453.246f3b0c.chunk.js",
     "static/media/sigCopier.svg": "/static/media/sigCopier.6581f71eef3d8212caa19053598855b5.svg",
     "static/media/offerPhone.svg": "/static/media/offerPhone.d1ff3b8b4c1293bb8efdb562ca52bff8.svg",
     "static/media/hb.png": "/static/media/hb.93494f266cd0dc40787a.png",
-    "static/media/ebook_copy.png.webp": "/static/media/ebook_copy.png.9a5aff4fe65c89062f94.webp",
+    "static/media/sniper 1.svg": "/static/media/sniper 1.a748bab7524358abba4ea767f031e723.svg",
+    "static/media/standing-book-mockup (3) 1.png": "/static/media/standing-book-mockup (3) 1.5e0700c51c7ea8688a2d.png",
     "static/media/11.png": "/static/media/11.1e25b53201aef785ba7e.png",
     "static/media/bear.jpg": "/static/media/bear.51a52761d6fcebced8b3.jpg",
     "static/media/logoWhite.jpg": "/static/media/logoWhite.cdcf86be20e62498a651.jpg",
@@ -19,16 +20,15 @@
     "static/media/register.svg": "/static/media/register.270edb260578be66d92f3ad0f04b50ab.svg",
     "static/media/exness.png": "/static/media/exness.6994f5d9215142ca38e7.png",
     "static/media/pay.webp": "/static/media/pay.f42818ed64307e602d42.webp",
-    "static/media/signal-book.webp": "/static/media/signal-book.c68851e1d935be7225a2.webp",
     "static/media/accuracy.webp": "/static/media/accuracy.63b05d621e33895638e3.webp",
     "static/media/wallet.png": "/static/media/wallet.22ca1e1beb64e0c93f53.png",
     "index.html": "/index.html",
-    "main.e20015db.css.map": "/static/css/main.e20015db.css.map",
-    "main.1c925b1c.js.map": "/static/js/main.1c925b1c.js.map",
+    "main.a1e61720.css.map": "/static/css/main.a1e61720.css.map",
+    "main.fc681ce1.js.map": "/static/js/main.fc681ce1.js.map",
     "453.246f3b0c.chunk.js.map": "/static/js/453.246f3b0c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e20015db.css",
-    "static/js/main.1c925b1c.js"
+    "static/css/main.a1e61720.css",
+    "static/js/main.fc681ce1.js"
   ]
 }

@@ -47,36 +47,11 @@ const Payment = () => {
                 </span>
             </div>
 
-
-            {/* <div className=' flex flex-col justify-center m-auto items-center w-[80%] p-6'>
-                <form action="" id='paymentForm' className='py-10 space-y-8'>
-                    <div className='flex justify-center items-center gap-10'>
-                        <label htmlFor="email" className='text-xl font-varela'>Email:</label>
-                        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} id='email-address' className=' border-2 p-2' />
-                    </div>
-                    <div className='flex justify-center items-center gap-5'>
-                        <label htmlFor="amount" className='text-xl font-varela'>Amount:</label>
-                        <input type="tel" id='amount' placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} className=' border-2 p-2' />
-                    </div>
-                    <div className='flex justify-start items-center gap-10'>
-                        <label htmlFor="name" className=' text-xl font-varela'>Name:</label>
-                        <input type="name" id='name' placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className=' border-2 p-2' />
-                    </div>
-                    <div className="flex justify-center py-4">
-                        <button 
-                        type='submit'
-                        onClick={payWithPaystack}
-                        className='cursor-pointer md:text-xl text-lg font-semibold bg-blue hover:text-blue hover:bg-transparent border border-blue md:rounded-full rounded-2xl p-4 w-[137px] transition ease-in-out duration-30 text-white hover:shadow-lg'>
-                            Pay
-                        </button>
-                    </div>
-                </form>
-            </div> */}
-
             <div className='w-4/5 py-20'>
                 <div className="flex lg:flex-row flex-col justify-around items-center space-y-16" data-aos="zoom-out-up">
-                    <div className='bg-blue rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] shadow animate-heart lg:w-[40%] w-full p-4 lg:p-0'>
-                        <img src={pay} className='w-[100%] p-3' alt="Contact Us" />
+                    <div className='bg-blue rounded-[30%_70%_70%_30%_/_14%_30%_70%_86%] shadow animate-heart lg:w-[30%] w-full p-4 lg:p-0'>
+                        <img src={pay} className='w-[100%] p-3' alt="Contact Us" 
+                    />
                     </div>
                     <div className=''>
                         <h2 className='lg:text-2xl text-xl text-center font-semibold ml-4 mb-[30px] text-blue'>Fill with your details</h2>
@@ -91,7 +66,8 @@ const Payment = () => {
                                 <div className=" ">
                                     <input
                                         className='w-full text-black font-medium text-lg tracking-[0.8px] transition-[0.3s] duration-[ease-in-out] mt-0 mb-2 mx-0 px-[26px] py-[18px] rounded-[20px] border border-blue placeholder:text-base placeholder:font-normal placeholder:text-gary-300 focus:placeholder:text-[#121212] focus:placeholder:opacity-80'
-                                        type="tel" id='amount' placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
+                                        type="tel" id='amount' placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)}
+                                    />
                                 </div>
                                 <div className="">
                                     <input

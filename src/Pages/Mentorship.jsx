@@ -3,10 +3,10 @@ import { BsCheck } from "react-icons/bs";
 import { IoMdStar } from "react-icons/io";
 import { PlanCard } from './PlanCard';
 
-const Mentorship = () => {
+const Mentorship = ({ items }) => {
 
 
-  
+
 
   const [bg, setBg] = useState('Forex')
   const [activeLink, setActiveLink] = useState('Tab 1');
@@ -138,14 +138,14 @@ const Mentorship = () => {
       {/* head */}
 
       <div className='text-center space-y-10'>
-            <h1 className='md:text-5xl text-3xl w-1/2 md:w-4/5 text-center m-auto font-varela font-semibold'>Choose your <span className='text-blue'>plan</span></h1>
-            <p className='lg:text-2xl text-lg lg:w-[40%] text-gray-500 w-[80%] m-auto'>learning forex made easier</p>
-            <span className='flex w-[90%] lg:w-[35%] lg:pt-10 m-auto items-center justify-between'>
-                <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
-                <span className='h-[20px] w-[20px] rounded-full bg-blue'></span>
-                <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
-            </span>
-        </div>
+        <h1 className='md:text-5xl text-3xl w-1/2 md:w-4/5 text-center m-auto font-varela font-semibold'>Choose your <span className='text-blue'>plan</span></h1>
+        <p className='lg:text-2xl text-lg lg:w-[40%] text-gray-500 w-[80%] m-auto'>learning forex made easier</p>
+        <span className='flex w-[90%] lg:w-[35%] lg:pt-10 m-auto items-center justify-between'>
+          <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
+          <span className='h-[20px] w-[20px] rounded-full bg-blue'></span>
+          <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
+        </span>
+      </div>
 
       {/* offer bottom flex */}
       <div className='md:w-2/3 m-auto'>
@@ -230,11 +230,11 @@ const Mentorship = () => {
                     key={index}
                     {...project}
                   />
-                  
                 )
               })
             }
           </div>
+
         </div>
 
         <div className={toggle === 2 ? 'block' : 'hidden'} eventKey="second">

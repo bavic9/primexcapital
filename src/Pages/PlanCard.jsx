@@ -35,31 +35,31 @@ export const PlanCard = ({
     }, []);
 
     return (
-        <div className="max-w-[1140px] m-auto py-4 lg:w-[30%] md:w-[400px]">
-            <div className='border lg:max-h-[750px] px-2 py-14 my-6 border-blue rounded-3xl shadow-sm shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110 '>
+        <div className="max-w-[1140px] m-auto py-4 md:w-[45%] w-4/5">
+            <div className='border px-2 py-14 my-6 border-blue rounded-3xl shadow-sm shadow-lightBlue transition delay-150 ease-in-out duration-1000 lg:hover:scale-110 '>
                 <h1 className=" md:text-3xl text-2xl text-gray-500 text-center font-semibold">{title}</h1>
-                <p className="font-bold text-center md:text-4xl text-3xl py-6">{price}</p>
-                <h5 className="md:text-2xl text-lg text-gray-500 text-center px-6 py-2">{headContent}</h5>
-                <div className="py-6 px-4 text-gray-500">
+                <p className="font-bold text-center md:text-3xl text-xl py-6">{price}</p>
+                <h5 className="md:text-xl text-lg text-gray-500 text-center px-6 py-2">{headContent}</h5>
+                <div className="py-6 px-4 text-gray-500 md:min-h-[300px]">
                     <div className="flex items-center justify-start gap-2 py-3">
                         <span className="text-blue md:text-4xl text-3xl">{icon}</span>
-                        <p className="md:text-xl text-lg">{content1}</p>
+                        <p className="md:text-lg text-base">{content1}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
                         <span className="text-blue md:text-4xl text-3xl">{icon}</span>
-                        <p className="md:text-xl text-lg">{content2}</p>
+                        <p className="md:text-lg text-base">{content2}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
                         <span className="text-blue md:text-4xl text-3xl">{icon}</span>
-                        <p className="md:text-xl text-lg">{content3}</p>
+                        <p className="md:text-lg text-base">{content3}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
                         <span className="text-blue md:text-4xl text-3xl">{icon}</span>
-                        <p className="md:text-xl text-lg">{content4}</p>
+                        <p className="md:text-lg text-base">{content4}</p>
                     </div>
                     <div className="flex items-center justify-start gap-2 py-3">
                         <span className="text-blue md:text-4xl text-3xl">{icon}</span>
-                        <p className="md:text-xl text-lg">{content5}</p>
+                        <p className="md:text-lg text-base">{content5}</p>
                     </div>
                 </div>
                 <div className="flex justify-center py-4">
@@ -73,14 +73,14 @@ export const PlanCard = ({
                     {
                         authUser ? (
                             <Link to={'/payment'}>
-                                <button className='cursor-pointer md:text-lg text-base font-semibold  bg-blue hover:text-blue hover:bg-transparent border border-blue rounded-lg px-5 py-2 transition ease-in-out duration-30 text-white hover:shadow-lg'>
-                                    Get Started
+                                <button className='cursor-pointer md:text-lg text-base font-medium  bg-blue hover:text-blue hover:bg-transparent border border-blue rounded-lg px-5 py-2 transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                                    Subscribe
                                 </button>
                             </Link>
                         ) : (
                             <Link to={'/login'}>
-                                <button className='cursor-pointer md:text-lg text-base font-semibold  bg-blue hover:text-blue hover:bg-transparent border border-blue rounded-lg px-5 py-2 transition ease-in-out duration-30 text-white hover:shadow-lg'>
-                                    Get Started
+                                <button className='cursor-pointer md:text-lg text-base font-medium  bg-blue hover:text-blue hover:bg-transparent border border-blue rounded-lg px-5 py-2 transition ease-in-out duration-30 text-white hover:shadow-lg'>
+                                    Subscribe
                                 </button>
                             </Link>
                         )

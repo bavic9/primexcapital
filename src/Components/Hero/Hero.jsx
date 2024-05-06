@@ -34,7 +34,7 @@ const Hero = () => {
         <section className='flex justify-center lg:min-h-[90vh]'>
             <div className=' w-[90%] m-auto py-16 lg:py-0 flex flex-col lg:flex-row items-center justify-around animationUp'>
                 {/* hero left */}
-                <div className='lg:w-full lg:pl-24 lg:m-auto px-4 lg:px-0  ' data-aos="fade-up">
+                <div className='lg:w-full md:w-[70%] md:mt-20 lg:pl-24 lg:m-auto px-4 lg:px-0' data-aos="fade-up">
                     <h1 className='text-white font-josefin lg:text-6xl text-5xl font-bold uppercase text-start lg:text-left lg:p-0'>
                         Learn to trade like a pro in no time
                         {/* <div className='curved-line'></div> */}
@@ -54,14 +54,14 @@ const Hero = () => {
                         {
                             authUser ? (
                                 <a href="https://t.me/primexcapital" target='blank'>
-                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
+                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-white text-white font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:border-blue hover:bg-blue'>
                                         Join Telegram Channel
                                     </button>
                                 </a>
                             ) : (
                                 <Link to={'/login'}>
                                     <a href="https://t.me/primexcapital" target='blank'>
-                                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:bg-blue'>
+                                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-white text-white font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:border-blue hover:bg-blue'>
                                             Join Telegram Channel
                                         </button>
                                     </a>
@@ -73,9 +73,9 @@ const Hero = () => {
 
 
                 {/* hero right */}
-                <div className='lg:w-full lg:pb-10' data-aos="fade-up">
+                <div className='lg:w-full flex items-center justify-center lg:pb-10' data-aos="fade-up">
                     <img
-                        className='lg:w-[80%]'
+                        className='md:w-[80%]'
                         src={hero} alt="" 
                     />
                 </div>

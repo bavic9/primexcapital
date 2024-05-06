@@ -14,8 +14,9 @@ module.exports = {
 
     extend: {
       colors: {
-        blue: '#00A7DD',
-        lightBlue: '#c4e7f3',
+        blue: '#0041be', 
+        // #00A7DD
+        lightBlue: '#4987ff',
         borderColor: '#06A3DA',
       },
       fontFamily: {

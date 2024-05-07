@@ -23,7 +23,7 @@ hr{
       justify-content: center;
       flex-direction: column;
       z-index: 1000;
-      width: 50vw;
+      width: 55vw;
       min-height: 60%;
       border-bottom-left-radius: 10px;
       gap: .5rem;

@@ -22,28 +22,28 @@ const Offer = () => {
                     <p className='  text-xl lg:text-2xl py-3'>Your search for consistency and ultimate trading knowledge ends here</p>
                     <div className='flex flex-col space-y-4 pt-3'>
                         <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <FaDotCircle className=' text-blue text-xl lg:text-2xl h-5' />
-                            <p className='text-lg lg:text-xl'>Take advantage of the 6+ years of trading experience of our traders.</p>
+                            <span className=' text-blue text-xl'><FaDotCircle /></span>
+                            <p className='text-lg lg:text-xl text-start'>Take advantage of the 6+ years of trading experience of our traders.</p>
                         </div>
                         <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <FaDotCircle className=' text-blue text-xl lg:text-2xl h-5' />
-                            <p className='text-lg lg:text-xl'>Learn our proven and powerful trading strategies.</p>
+                            <span className=' text-blue text-xl'><FaDotCircle /></span>
+                            <p className='text-lg lg:text-xl text-start'>Learn our proven and powerful trading strategies.</p>
                         </div>
                         <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <FaDotCircle className=' text-blue text-xl lg:text-2xl h-5' />
-                            <p className='text-lg lg:text-xl'>Enhance your trading knowledge with free trading analysis and courses.</p>
+                            <span className=' text-blue text-xl'><FaDotCircle /></span>
+                            <p className='text-lg lg:text-xl text-start'>Enhance your trading knowledge with free trading analysis and courses.</p>
                         </div>
                         <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <FaDotCircle className=' text-blue text-xl lg:text-2xl h-5' />
-                            <p className='text-lg lg:text-xl'>Free Forex, Crypto, & Indices signals.</p>
+                            <span className=' text-blue text-xl'><FaDotCircle /></span>
+                            <p className='text-lg lg:text-xl text-start'>Free Forex, Crypto, & Indices signals.</p>
                         </div>
                         <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <FaDotCircle className=' text-blue text-xl lg:text-2xl h-5' />
-                            <p className='text-lg lg:text-xl'>Chat 24/7 with our team.</p>
+                            <span className=' text-blue text-xl'><FaDotCircle /></span>
+                            <p className='text-lg lg:text-xl text-start'>Chat 24/7 with our team.</p>
                         </div>
                         <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <FaDotCircle className=' text-blue text-xl lg:text-2xl h-5' />
-                            <p className='text-lg lg:text-xl'>Utilize our most powerful tools and indicators.</p>
+                            <span className=' text-blue text-xl'><FaDotCircle /></span>
+                            <p className='text-lg lg:text-xl text-start'>Utilize our most powerful tools and indicators.</p>
                         </div>
                     </div>
                 </div>

@@ -22,63 +22,66 @@ const Courses = () => {
     return (
         <div className=' bg-slate-200 py-20'>
             <div className='px-4 lg:px-32'>
-                <h1 className=' text-3xl lg:text-6xl lg:w-4/5 m-auto text-center font-extrabold font-lato py-4'>Let’s Smash your “impossible” trading goal together Certainly! <br /> <span className='text-blue'>Here's a spun version of your content</span></h1>
+                <h1 className=' text-3xl lg:text-6xl lg:w-4/5 m-auto text-center font-extrabold font-lato py-4'>Let’s Smash your “impossible” <br /> <span className='text-blue'>trading goal together Certainly! </span></h1>
 
                 {/* grid box */}
-                <div className=' grid lg:grid-cols-3 md:grid-cols-2 py-16 gap-8'>
-                    <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                        <h2 className=' text-2xl font-bold text-black'>Save Time and Energy</h2>
-                        <img className='w-[45px]' src={time} alt="icon" />
-                        <p className='text-2xl font-lato font-light'>
-                            <span className='font-bold'> DON'T have enough time?</span> Spend less time monitoring charts and news updates. Let us handle
-                            the market analysis while you focus on what matters most to you – <span className='font-bold'>whether it's work or family
-                                time. </span>
-                        </p>
-                    </div>
-                    <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                        <h2 className=' text-2xl font-bold text-black'>Save Trading</h2>
-                        <img className='w-[45px]' src={wallet} alt="icon" />
-                        <p className='text-2xl font-lato font-light'>
-                            Avoid the costly learning curve of trading. Learn and earn
-                            <span className='font-bold'> with the pros and avoid rookie
-                                mistakes.</span>
-                        </p>
-                    </div>
-                    <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                        <h2 className=' text-2xl font-bold text-black'>
-                            Effortless Trading
-                        </h2>
-                        <img className='w-[45px]' src={toDo} alt="icon" />
-                        <p className='text-2xl font-lato font-light'>
-                            Our dedicated team of <span className='font-bold'> traders works around the clock.</span> to analyze and decode market trends for
-                            you. We all take the same trades and   <span className='font-bold'>achieve consistent profitability.</span>
-                        </p>
-                    </div>
-                    <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                        <h2 className=' text-2xl font-bold text-black'>Top Notch Consistent</h2>
-                        <img className='w-[45px]' src={trophy} alt="icon" />
-                        <p className='text-2xl font-lato font-light'>
-                            <span className='font-bold'>Consistency is our strength and it’s evident. </span> With disciplined and patient trading strategies, we
-                            ensure consistent profits, setting us apart from
-                            <span className='font-bold'> other similar services. </span>
-                        </p>
-                    </div>
-                    <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                        <h2 className=' text-2xl font-bold text-black'>24/7 Customer Support</h2>
-                        <img className='w-[45px]' src={phone2} alt="icon" />
-                        <p className='text-2xl font-lato font-light'>
-                            Need assistance?
-                            <span className='font-bold'> Our support agents are available  </span> round the clock to address your queries
-                            promptly,  <span className='font-bold'>ensuring you're never left in the dark.</span>
-                        </p>
-                    </div>
-                    <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                        <h2 className=' text-2xl font-bold text-black'>Accuracy</h2>
-                        <img className='w-[45px]' src={target} alt="icon" />
-                        <p className='text-2xl font-lato font-light'>
-                            Benefit from our over <span className='font-bold'>85% accuracy rate,</span> minimizing drawdowns and maximizing your profits
-                            with every trade.
-                        </p>
+                <div className='py-16'>
+                    {/* <p className='lg:text-3xl text-2xl font-bold py-8'>Here's a spun version of your content:</p> */}
+                    <div className=' grid lg:grid-cols-3 md:grid-cols-2 gap-8'>
+                        <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
+                            <h2 className=' text-2xl font-bold text-black'>Save Time and Energy</h2>
+                            <img className='w-[45px]' src={time} alt="icon" />
+                            <p className='text-2xl font-lato font-light'>
+                                <span className='font-bold'> DON'T have enough time?</span> Spend less time monitoring charts and news updates. Let us handle
+                                the market analysis while you focus on what matters most to you – <span className='font-bold'>whether it's work or family
+                                    time. </span>
+                            </p>
+                        </div>
+                        <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
+                            <h2 className=' text-2xl font-bold text-black'>Save Trading</h2>
+                            <img className='w-[45px]' src={wallet} alt="icon" />
+                            <p className='text-2xl font-lato font-light'>
+                                Avoid the costly learning curve of trading. Learn and earn
+                                <span className='font-bold'> with the pros and avoid rookie
+                                    mistakes.</span>
+                            </p>
+                        </div>
+                        <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
+                            <h2 className=' text-2xl font-bold text-black'>
+                                Effortless Trading
+                            </h2>
+                            <img className='w-[45px]' src={toDo} alt="icon" />
+                            <p className='text-2xl font-lato font-light'>
+                                Our dedicated team of <span className='font-bold'> traders works around the clock.</span> to analyze and decode market trends for
+                                you. We all take the same trades and   <span className='font-bold'>achieve consistent profitability.</span>
+                            </p>
+                        </div>
+                        <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
+                            <h2 className=' text-2xl font-bold text-black'>Top Notch Consistent</h2>
+                            <img className='w-[45px]' src={trophy} alt="icon" />
+                            <p className='text-2xl font-lato font-light'>
+                                <span className='font-bold'>Consistency is our strength and it’s evident. </span> With disciplined and patient trading strategies, we
+                                ensure consistent profits, setting us apart from
+                                <span className='font-bold'> other similar services. </span>
+                            </p>
+                        </div>
+                        <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
+                            <h2 className=' text-2xl font-bold text-black'>24/7 Customer Support</h2>
+                            <img className='w-[45px]' src={phone2} alt="icon" />
+                            <p className='text-2xl font-lato font-light'>
+                                Need assistance?
+                                <span className='font-bold'> Our support agents are available  </span> round the clock to address your queries
+                                promptly,  <span className='font-bold'>ensuring you're never left in the dark.</span>
+                            </p>
+                        </div>
+                        <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
+                            <h2 className=' text-2xl font-bold text-black'>Accuracy</h2>
+                            <img className='w-[45px]' src={target} alt="icon" />
+                            <p className='text-2xl font-lato font-light'>
+                                Benefit from our over <span className='font-bold'>85% accuracy rate,</span> minimizing drawdowns and maximizing your profits
+                                with every trade.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -74,7 +74,7 @@ const Navbar = () => {
                 <Link to='/'><img className='md:w-48 w-40 md:h-20 h-12 ' src={logoWhite} alt="logo" /></Link>
             </div>
             <div ref={NavRef} className=' md:flex gap-10 relative menu lg:space-y-0 space-y-8'>
-                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] items-center text-black lg:text-gray-700 text-xl lg:text-lg font-bold lg:font-semibold outline-none transition'>
+                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] lg:items-center items-start ml-[15%] lg:ml-0 text-black lg:text-gray-700 text-xl lg:text-lg font-bold lg:font-semibold outline-none transition'>
                     <Link to='/'>
                         <li
                             onClick={() => { setMenu('Home') }}
@@ -134,10 +134,10 @@ const Navbar = () => {
                 }
 
 
-                <div className='lg:hidden outline-none  cursor-pointer flex justify-between w-full md:px-12 px-5 absolute top-[0rem]'>
-                    <img src={logosmb} className='w-16' alt="logo" />
+                <div className='lg:hidden outline-none  cursor-pointer flex justify-end w-full md:px-12 px-5 absolute top-[-1.2rem]'>
+                    <img src={logosmb} className='w-16 hidden' alt="logo" />
                     <button className=' p-2 text-black hover:bg-lightBlue hover:p-2 hover:rounded-md ease-in-out duration-700 ' onClick={showNavBar}>
-                        <FaTimes size={30} />
+                        <FaTimes size={25} />
                     </button>
                 </div>
             </div>

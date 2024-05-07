@@ -29,55 +29,55 @@ const Courses = () => {
                     {/* <p className='lg:text-3xl text-2xl font-bold py-8'>Here's a spun version of your content:</p> */}
                     <div className=' grid lg:grid-cols-3 md:grid-cols-2 gap-8'>
                         <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                            <h2 className=' text-2xl font-bold text-black'>Save Time and Energy</h2>
+                            <h2 className='text-lg lg:text-2xl font-bold text-black'>Save Time and Energy</h2>
                             <img className='w-[45px]' src={time} alt="icon" />
-                            <p className='text-2xl font-lato font-light'>
+                            <p className='lg:text-2xl text-base font-lato font-light'>
                                 <span className='font-bold'> DON'T have enough time?</span> Spend less time monitoring charts and news updates. Let us handle
                                 the market analysis while you focus on what matters most to you – <span className='font-bold'>whether it's work or family
                                     time. </span>
                             </p>
                         </div>
                         <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                            <h2 className=' text-2xl font-bold text-black'>Save Trading</h2>
+                            <h2 className='text-lg lg:text-2xl font-bold text-black'>Save Trading</h2>
                             <img className='w-[45px]' src={wallet} alt="icon" />
-                            <p className='text-2xl font-lato font-light'>
+                            <p className='lg:text-2xl text-base font-lato font-light'>
                                 Avoid the costly learning curve of trading. Learn and earn
                                 <span className='font-bold'> with the pros and avoid rookie
                                     mistakes.</span>
                             </p>
                         </div>
                         <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                            <h2 className=' text-2xl font-bold text-black'>
+                            <h2 className='text-lg lg:text-2xl font-bold text-black'>
                                 Effortless Trading
                             </h2>
                             <img className='w-[45px]' src={toDo} alt="icon" />
-                            <p className='text-2xl font-lato font-light'>
+                            <p className='lg:text-2x text-base font-lato font-light'>
                                 Our dedicated team of <span className='font-bold'> traders works around the clock.</span> to analyze and decode market trends for
                                 you. We all take the same trades and   <span className='font-bold'>achieve consistent profitability.</span>
                             </p>
                         </div>
                         <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                            <h2 className=' text-2xl font-bold text-black'>Top Notch Consistent</h2>
+                            <h2 className='text-lg lg:text-2xl font-bold text-black'>Top Notch Consistent</h2>
                             <img className='w-[45px]' src={trophy} alt="icon" />
-                            <p className='text-2xl font-lato font-light'>
+                            <p className='lg:text-2xl text-base font-lato font-light'>
                                 <span className='font-bold'>Consistency is our strength and it’s evident. </span> With disciplined and patient trading strategies, we
                                 ensure consistent profits, setting us apart from
                                 <span className='font-bold'> other similar services. </span>
                             </p>
                         </div>
                         <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                            <h2 className=' text-2xl font-bold text-black'>24/7 Customer Support</h2>
+                            <h2 className='text-lg lg:text-2xl font-bold text-black'>24/7 Customer Support</h2>
                             <img className='w-[45px]' src={phone2} alt="icon" />
-                            <p className='text-2xl font-lato font-light'>
+                            <p className='lg:text-2xl text-base font-lato font-light'>
                                 Need assistance?
                                 <span className='font-bold'> Our support agents are available  </span> round the clock to address your queries
                                 promptly,  <span className='font-bold'>ensuring you're never left in the dark.</span>
                             </p>
                         </div>
                         <div className=' min-h-[350px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-10 lg:px-12 transition ease-in-out duration-300 shadow-md hover:shadow-2xl' >
-                            <h2 className=' text-2xl font-bold text-black'>Accuracy</h2>
+                            <h2 className='text-lg lg:text-2xl font-bold text-black'>Accuracy</h2>
                             <img className='w-[45px]' src={target} alt="icon" />
-                            <p className='text-2xl font-lato font-light'>
+                            <p className='lg:text-2xl text-base font-lato font-light'>
                                 Benefit from our over <span className='font-bold'>85% accuracy rate,</span> minimizing drawdowns and maximizing your profits
                                 with every trade.
                             </p>
@@ -99,7 +99,7 @@ const Courses = () => {
                         <p className='text-xl font-light'>
                             <span className='font-bold'>Get sniper entries without so much analysis </span>
                         </p>
-                        <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Get Now</button>
+                        <button className='lg:px-10 lg:py-5 px-6 py-3 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Get Now</button>
                     </div>
                     <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
                         <img className='w-[200px] m-auto' src={phone} alt="" />
@@ -110,7 +110,7 @@ const Courses = () => {
                         {/* <p className='text-xl font-light'>
                             Our signal copier will copy all the signals from our telegram signal channels in less than 5 seconds.
                         </p> */}
-                        <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Get Now</button>
+                        <button className='lg:px-10 lg:py-5 px-6 py-3 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Get Now</button>
                     </div>
                     <div className=' min-h-[650px] flex flex-col space-y-6 rounded-lg bg-white py-10 px-6 lg:px-12 ' >
                         <img className='w-[250px] m-auto' src={book} alt="" />
@@ -122,7 +122,7 @@ const Courses = () => {
                             This <span className='font-bold'>FREE EBOOK</span> will help you master the market with confidence, discipline and a positive
                             attitude. No amount is too little to build.
                         </p>
-                        <button className='px-10 py-5 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Get Now</button>
+                        <button className='lg:px-10 lg:py-5 px-6 py-3 w-fit m-auto border border-blue text-blue text-xl cursor-pointer transition ease-in duration-300 hover:text-white hover:bg-blue shadow-xl hover:shadow-md'>Get Now</button>
                     </div>
                 </div>
             </div>

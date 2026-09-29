@@ -1,158 +1,113 @@
-import React, { useEffect, useRef, useState } from 'react'
-import './Navbar.css'
-import logoWhite from '../Assets/logoWhite.jpg'
-import logosmb from '../Assets/logosmb.png'
-import { BiMenuAltRight } from 'react-icons/bi'
-import { FaTimes } from "react-icons/fa";
-import { Link } from 'react-router-dom'
-import { onAuthStateChanged, signOut } from 'firebase/auth'
-import { auth } from '../../firebase'
+import React, { useEffect, useState } from 'react';
+import './Navbar.css';
+import logo from '../Assets/logoWhite.jpg';
+import { BiMenuAltRight } from 'react-icons/bi';
+import { FaTimes } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
 
+const links = [
+  { label: 'Home', to: '/' },
+  { label: 'Mentorship', to: '/mentorship' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'FAQs', to: '/faqs' },
+];
 
 const Navbar = () => {
+  const [authUser, setAuthUser] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
 
-    const [authUser, setAuthUser] = useState(null);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, setAuthUser);
+    return unsubscribe;
+  }, []);
 
-    useEffect(() => {
-        const listen = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setAuthUser(user);
-            } else {
-                setAuthUser(null);
-            }
-        });
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 8);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-        return () => {
-            listen();
-        };
-    }, []);
+  useEffect(() => setOpen(false), [location.pathname]);
 
-    const userSignOut = () => {
-        signOut(auth)
-            .then(() => {
-                console.log("sign out successful");
-            })
-            .catch((error) => console.log(error));
-    };
+  const handleSignOut = async () => {
+    try { await signOut(auth); } catch (error) { console.error(error); }
+  };
 
+  return (
+    <header className={`site-nav sticky top-0 z-50 border-b border-transparent bg-white/95 backdrop-blur ${scrolled ? 'scrolled' : ''}`}>
+      <div className="page-container flex h-[68px] items-center justify-between">
+        <Link to="/" className="flex items-center" aria-label="Prime X Capital home">
+          <img src={logo} alt="Prime X Capital" className="h-11 w-auto object-contain" />
+        </Link>
 
-    const [scrolled, setScrolled] = useState(false);
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+          {links.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className={`text-sm font-medium transition-colors duration-150 ${
+                location.pathname === link.to ? 'text-blue' : 'text-slate-600 hover:text-blue'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          {authUser ? (
+            <button onClick={handleSignOut} className="secondary-btn !px-4 !py-2">
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="primary-btn !px-4 !py-2">Login</Link>
+          )}
+        </nav>
 
-
-    useEffect(() => {
-        const onScroll = () => {
-            if (window.scrollY > 0) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        }
-
-        window.addEventListener("scroll", onScroll);
-
-        return () => window.removeEventListener("scroll", onScroll);
-    }, [])
-
-
-    const NavRef = useRef();
-
-    const showNavBar = () => {
-        NavRef.current.classList.toggle('responsive_nav')
-    }
-
-    const [menu, setMenu] = useState('Home')
-
-
-    return (
-        <div
-            className={scrolled ? 'ease-in-out duration-0 bg-white fixed w-[100vw] flex justify-between z-50 items-center md:px-10 px-4 py-3 shadow-lg'
-                : ' flex bg-white justify-between items-center md:px-10 px-4 py-3 shadow-lg w-[100vw]'}
+        <button
+          type="button"
+          aria-label="Open menu"
+          aria-expanded={open}
+          onClick={() => setOpen(true)}
+          className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
         >
-            <div
-                onClick={() => { setMenu('Home') }}
-                className='flex items-center gap-[10px]'>
-                <Link to='/'><img className='md:w-48 w-40 md:h-20 h-12 ' src={logoWhite} alt="logo" /></Link>
-            </div>
-            <div ref={NavRef} className=' md:flex gap-10 relative menu lg:space-y-0 space-y-8'>
-                <ul className='lg:flex flex lg:flex-row flex-col gap-[50px] lg:items-center items-start ml-[15%] lg:ml-0 text-black lg:text-gray-700 text-base text-start lg:text-lg font-bold lg:font-semibold outline-none transition'>
-                    <Link to='/'>
-                        <li
-                            onClick={() => { setMenu('Home') }}
-                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                            Home{menu === 'Home' ? <hr /> : <></>}
-                        </li>
-                    </Link>
-                    <Link to='/mentorship'>
-                        <li
-                            onClick={() => { setMenu('Mentorship Plan') }}
-                            className='active:text-blue text-start cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                            Mentorship Plan{menu === 'Mentorship Plan' ? <hr /> : <></>}
-                        </li>
-                    </Link>
-                    {/* <li
-                        onClick={() => { setMenu('Fire Calculator') }}
-                        className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                        after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                        <Link to='/'>Fire Calculator</Link>
-                        {menu === 'Fire Calculator' ? <hr /> : <></>}
-                    </li> */}
-                    <Link to='/'>
-                        <li
-                            onClick={() => { setMenu('Blog') }}
-                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                            Blog
-                            {/* {menu === 'Blog' ? <hr /> : <></>} */}
-                        </li>
-                    </Link>
-                    <Link to='/'>
-                        <li
-                            onClick={() => { setMenu('FAQs') }}
-                            className='active:text-blue cursor-pointer relative after:content after:absolute after:bg-blue after:h-[3px] after:w-0 after:left-0 
-                            after:top-[31px] after:ease-in-out after:duration-500 after:rounded-sm hover:text-blue after:hover:w-full'>
-                            FAQs
-                            {/* {menu === 'FAQs' ? <hr /> : <></>} */}
-                        </li>
-                    </Link>
-                </ul>
-                {
-                    authUser ? (
-                        <div
-                            onClick={() => { setMenu('Login') }}
-                            className='md:mt-0 mt-4'>
-                            <Link onClick={userSignOut} to='/login'><button className='cursor-pointer text-2xl lg:text-lg lg:font-semibold text-blue border border-blue rounded-2xl lg:rounded-full px-6 py-2 lg:p-2 lg:w-[87px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Logout</button></Link>
-                        </div>
-                    ) : (
-                        <div
-                            onClick={() => { setMenu('Login') }}
-                            className='md:mt-0 mt-4'>
-                            <Link to='/login'><button className='cursor-pointer text-2xl lg:text-lg lg:font-semibold text-blue border border-blue rounded-2xl lg:rounded-full px-6 py-2 lg:p-2 lg:w-[87px] bg-transparent transition ease-in-out duration-300 hover:bg-blue hover:text-white hover:shadow-lg'>Login</button></Link>
-                        </div>
-                    )
-                }
+          <BiMenuAltRight size={27} />
+        </button>
+      </div>
 
+      {open && <button aria-label="Close menu" className="mobile-overlay" onClick={() => setOpen(false)} />}
 
-                <div className='lg:hidden outline-none  cursor-pointer flex justify-end w-full md:px-12 px-5 absolute top-[-1.2rem]'>
-                    <img src={logosmb} className='w-16 hidden' alt="logo" />
-                    <button className=' p-2 text-black hover:bg-lightBlue hover:p-2 hover:rounded-md ease-in-out duration-700 ' onClick={showNavBar}>
-                        <FaTimes size={25} />
-                    </button>
-                </div>
-            </div>
-            <div
-                className='lg:hidden cursor-pointer p-2 text-black hover:bg-lightBlue hover:p-2 hover:rounded-md ease-in-out duration-700'
-                onClick={showNavBar}>
-                <BiMenuAltRight size={30} />
-            </div>
+      <aside className={`mobile-menu ${open ? 'open' : ''}`} aria-label="Mobile navigation">
+        <div className="absolute right-5 top-5">
+          <button onClick={() => setOpen(false)} className="rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Close menu">
+            <FaTimes size={20} />
+          </button>
         </div>
-    )
-}
+        <div className="flex flex-col gap-2">
+          {links.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className={`rounded-lg px-3 py-3 text-sm font-semibold ${
+                location.pathname === link.to ? 'bg-blue/10 text-blue' : 'text-slate-700 hover:bg-slate-50'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="mt-3 border-t border-slate-100 pt-4">
+            {authUser ? (
+              <button onClick={handleSignOut} className="secondary-btn w-full">Logout</button>
+            ) : (
+              <Link to="/login" className="primary-btn w-full">Login</Link>
+            )}
+          </div>
+        </div>
+      </aside>
+    </header>
+  );
+};
 
-export default Navbar
-
-
-
-
-
+export default Navbar;

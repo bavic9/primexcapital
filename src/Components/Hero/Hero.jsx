@@ -1,90 +1,52 @@
-import React, { useEffect, useState } from 'react'
-import './Hero.css'
-import hero from '../Assets/hb.png'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect, useState } from 'react';
+import './Hero.css';
+import hero from '../Assets/hb.png';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../firebase'
-import { Link } from 'react-router-dom'
-
+import { auth } from '../../firebase';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const [authUser, setAuthUser] = useState(null);
 
-    const [authUser, setAuthUser] = useState(false);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, setAuthUser);
+    return unsubscribe;
+  }, []);
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setAuthUser(user);
-            } else {
-                setAuthUser(null);
-            }
-        });
+  return (
+    <section className="hero-section overflow-hidden text-white">
+      <div className="page-container grid min-h-[620px] items-center gap-10 py-16 lg:grid-cols-[1.05fr_.95fr] lg:py-0">
+        <div className="max-w-xl">
+          <span className="section-label !text-blue-300">Prime X Capital</span>
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-[3.4rem]">
+            Learn to trade with a clearer, more disciplined approach.
+          </h1>
+          <p className="mt-5 max-w-lg text-base leading-7 text-slate-300 md:text-lg">
+            Improve your trading knowledge, connect with experienced traders, and build a more structured trading routine.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            {authUser ? (
+              <a href="https://t.me/primexcapital" target="_blank" rel="noreferrer" className="primary-btn !bg-blue !px-5 !py-3">
+                Join Telegram
+              </a>
+            ) : (
+              <Link to="/login" className="primary-btn !bg-blue !px-5 !py-3">Join the Community</Link>
+            )}
+            <Link to="/mentorship" className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10">
+              View mentorship
+            </Link>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-x-7 gap-y-2 border-t border-white/10 pt-5 text-xs text-slate-300">
+            <span>Forex</span><span>Crypto</span><span>Indices</span><span>Education</span>
+          </div>
+        </div>
 
-        return () => {
-            unsubscribe();
-        };
-    }, []);
+        <div className="flex justify-center lg:justify-end">
+          <img className="hero-art w-[78%] max-w-[520px] md:w-[70%] lg:w-full" src={hero} alt="Prime X Capital trading illustration" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-    useEffect(() => {
-        AOS.init({ duration: 2000 })
-    }, [])
-
-    return (
-        <section className='flex justify-center lg:min-h-[90vh]'>
-            <div className=' w-[90%] m-auto py-16 lg:py-0 flex flex-col lg:flex-row items-center justify-around animationUp'>
-                {/* hero left */}
-                <div className='lg:w-full md:w-[70%] md:mt-20 lg:pl-24 lg:m-auto px-4 lg:px-0' data-aos="fade-up">
-                    <h1 className='text-white font-josefin lg:text-6xl text-5xl font-bold uppercase text-start lg:text-left lg:p-0'>
-                        Learn to trade like a pro in no time
-                        {/* <div className='curved-line'></div> */}
-                    </h1>
-                    <p className=' lg:w-[90%] m-auto lg:m-0 text-slate-400 text-start uppercase lg:text-start text-xl md:text-2xl font-josefin py-6'>
-                        Evaluate your trading journey & network with like minds and expert traders
-                    </p>
-                    <div className='flex justify-start gap-3 items-center md:space-x-6 py-6'>
-                        {/* <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-5 lg:px-10 py-3 hover:text-white hover:bg-blue'>
-                            Join Free Classes
-                        </button> */}
-
-                        {/* <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-2xl text-base px-3 lg:px-6 py-5 hover:text-white hover:bg-blue'>
-                            Enroll Now
-                        </button> */}
-
-                        {
-                            authUser ? (
-                                <a href="https://t.me/primexcapital" target='blank'>
-                                    <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-white text-white font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:border-blue hover:bg-blue'>
-                                        Join Telegram Channel
-                                    </button>
-                                </a>
-                            ) : (
-                                <Link to={'/login'}>
-                                    <a href="https://t.me/primexcapital" target='blank'>
-                                        <button className='rounded-lg ease-out duration-500 hover:shadow-lg border border-white text-white font-josefin font-semibold md:text-2xl text-base px-3 lg:px-6 py-4 hover:text-white hover:border-blue hover:bg-blue'>
-                                            Join Telegram Channel
-                                        </button>
-                                    </a>
-                                </Link>
-                            )
-                        }
-                    </div>
-                </div>
-
-
-                {/* hero right */}
-                <div className='lg:w-full flex items-center justify-center lg:pb-10' data-aos="fade-up">
-                    <img
-                        className='md:w-[80%]'
-                        src={hero} alt="" 
-                    />
-                </div>
-            </div>
-
-
-
-        </section>
-    )
-}
-
-export default Hero
+export default Hero;

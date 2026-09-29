@@ -1,133 +1,41 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { FaDotCircle } from "react-icons/fa";
-import phone from '../Assets/offerPhone.svg'
+import React from 'react';
+import { FaDotCircle } from 'react-icons/fa';
+import phone from '../Assets/offerPhone.svg';
 
-const Offer = () => {
+const points = [
+  'Learn from experienced traders and structured educational resources.',
+  'Understand practical trading strategies and risk management.',
+  'Access market analysis, courses, and trading resources.',
+  'Explore Forex, Crypto, and Indices learning materials.',
+  'Connect with a community of traders and support.',
+  'Use practical tools and indicators as part of your workflow.',
+];
 
-    useEffect(() => {
-        AOS.init({ duration: 2000 })
-    }, [])
-
-    return (
-        <div className=' bg-gray-950 py-20'>
-            <div className='flex flex-col lg:flex-row items-center justify-evenly lg:px-32 md:px-20 px-4 pt-16 text-white space-y-10 space-x-4' data-aos="fade-down">
-
-                {/* left flex */}
-                <div className='flex flex-col py-4 lg:py-0 px-2 space-y-2 lg:space-y-4 w-full font-prompt'>
-                    <h1 className=' text-blue font-bold text-3xl lg:text-4xl'>OVER 90% of</h1>
-                    <h1 className='  w-4/5 text-3xl lg:text-4xl font-bold tracking-widest lg:tracking-wider text-start'>Traders worldwide lose money. Join the academy and be the 10% most
-                        successful traders out there.</h1>
-                    <p className='  text-xl lg:text-2xl py-3'>Your search for consistency and ultimate trading knowledge ends here</p>
-                    <div className='flex flex-col space-y-4 pt-3'>
-                        <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <span className=' text-blue text-xl'><FaDotCircle /></span>
-                            <p className='text-lg lg:text-xl text-start'>Take advantage of the 6+ years of trading experience of our traders.</p>
-                        </div>
-                        <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <span className=' text-blue text-xl'><FaDotCircle /></span>
-                            <p className='text-lg lg:text-xl text-start'>Learn our proven and powerful trading strategies.</p>
-                        </div>
-                        <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <span className=' text-blue text-xl'><FaDotCircle /></span>
-                            <p className='text-lg lg:text-xl text-start'>Enhance your trading knowledge with free trading analysis and courses.</p>
-                        </div>
-                        <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <span className=' text-blue text-xl'><FaDotCircle /></span>
-                            <p className='text-lg lg:text-xl text-start'>Free Forex, Crypto, & Indices signals.</p>
-                        </div>
-                        <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <span className=' text-blue text-xl'><FaDotCircle /></span>
-                            <p className='text-lg lg:text-xl text-start'>Chat 24/7 with our team.</p>
-                        </div>
-                        <div className='flex justify-start items-center space-x-3 lg:space-x-3'>
-                            <span className=' text-blue text-xl'><FaDotCircle /></span>
-                            <p className='text-lg lg:text-xl text-start'>Utilize our most powerful tools and indicators.</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* right flex */}
-                <div className='p-4 w-full md:w-4/5 m-auto'>
-                    <img className='' src={phone} alt="phone" />
-                </div>
+const Offer = () => (
+  <section className="bg-slate-950 py-16 md:py-20">
+    <div className="page-container grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+      <div className="text-white">
+        <span className="section-label !text-blue-300">Why Prime X Capital</span>
+        <h2 className="mt-3 text-2xl font-bold leading-tight md:text-3xl">
+          Build better trading habits with practical education and support.
+        </h2>
+        <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 md:text-base">
+          A focused learning environment for traders who want to improve their market knowledge and develop a more consistent process.
+        </p>
+        <div className="mt-7 grid gap-4 sm:grid-cols-2">
+          {points.map((point) => (
+            <div key={point} className="flex gap-3 text-sm leading-6 text-slate-300">
+              <FaDotCircle className="mt-1 shrink-0 text-blue-400" size={12} />
+              <span>{point}</span>
             </div>
+          ))}
         </div>
+      </div>
+      <div className="flex justify-center lg:justify-end">
+        <img src={phone} alt="Prime X Capital mobile trading service" className="w-[70%] max-w-[360px]" />
+      </div>
+    </div>
+  </section>
+);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // <div className=' lg:space-y-[10rem] space-y-20 py-[10rem] m-auto bg-black'>
-        //     {/* offer head */}
-        //     <div className='text-center space-y-10' data-aos="fade-up">
-        //         <h1 className='md:text-5xl text-3xl w-2/3 md:w-4/5 text-center m-auto font-varela font-semibold'>What we have to <span className='text-blue'>offer</span></h1>
-        //         <p className='lg:text-2xl text-lg lg:w-[40%] text-gray-500 w-[80%] m-auto'>Your dreams deserve a solid training academy, we have got you covered!</p>
-        //         <span className='flex w-[90%] lg:w-[35%] lg:pt-10 m-auto items-center justify-between'>
-        //             <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
-        //             <span className='h-[20px] w-[20px] rounded-full bg-blue'></span>
-        //             <span className='w-[45%] lg:w-[46%] h-[3px] rounded-full bg-blue animLine'></span>
-        //         </span>
-        //     </div>
-
-        //     {/* offer bottom flex */}
-        //     <div className='flex flex-col lg:flex-row justify-around items-center space-y-16 lg:space-y-0 lg:w-[75%] lg:m-auto '>
-        //         <div className='mx-4 lg:max-h-[420px] md:w-[300px]  border rounded-3xl space-y-4 pb-16 shadow-lg shadow-gray-300 transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'  data-aos="fade-up">
-        //             <h1 className='pt-12 text-center text-black font-varela font-semibold md:text-2xl text-xl'>Trading Community</h1>
-        //             <p className='text-center font-varela md:text-lg text-lg text-gray-600 w-[90%] m-auto leading-10'>
-        //                 We foster a trading community of over 100,000 subscribers where high quality signals, trading resources and tools are shared for free. Click the button below to join now.
-        //             </p>
-        //             <button className='flex justify-center items-center m-auto rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-xl text-lg px-3 py-2 hover:text-white hover:bg-blue'>
-        //                 Join Telegram Channel
-        //             </button>
-        //         </div>
-        //         <div className='mx-4 lg:max-h-[420px] md:w-[300px]  border rounded-3xl space-y-4 pb-16 shadow-lg shadow-gray-300 transition delay-150 ease-in-out duration-1000 lg:hover:scale-110' data-aos="fade-up" data-aos-duration="800">
-        //             <h1 className='pt-12 text-center text-black font-varela font-semibold md:text-2xl text-xl'>Forex Education</h1>
-        //             <p className='text-center font-varela md:text-lg text-lg text-gray-600 w-[90%] m-auto leading-10'>
-        //             We provide a robust curriculum that covers everything from forex basics to advanced trading strategies. Our aim is to equip you with the knowledge and skills you need to thrive in the forex market. Click the button below to enroll now
-        //             </p>
-        //             <button className='flex justify-center items-center m-auto rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-xl text-lg px-3 py-2 hover:text-white hover:bg-blue'>
-        //                 Enroll Now
-        //             </button>
-        //         </div>
-        //         <div className='mx-4 lg:max-h-[420px] md:w-[300px]  border rounded-3xl space-y-4 pb-16 shadow-lg shadow-gray-300 transition delay-150 ease-in-out duration-1000 lg:hover:scale-110'  data-aos="fade-up">
-        //             <h1 className='pt-12 text-center text-black font-varela font-semibold md:text-2xl text-xl'>Live Trading Session</h1>
-        //             <p className='text-center font-varela md:text-lg text-lg text-gray-600 w-[90%] m-auto leading-10'>
-        //             Our free live trading session on YouTube every Monday 1:00 PM GMT+1 was created to help traders improve their trading and be consistently profitable. Click the button below to subscribe to the channel.
-        //             </p>
-        //             <button className='flex justify-center items-center m-auto rounded-lg ease-out duration-500 hover:shadow-lg border border-blue text-blue font-varela font-semibold md:text-xl text-lg px-3 py-2 hover:text-white hover:bg-blue'>
-        //                 Click here to subscribe
-        //             </button>
-        //         </div>
-        //     </div>
-        // </div>
-    )
-}
-
-export default Offer
-
+export default Offer;

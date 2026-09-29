@@ -1,38 +1,9 @@
-section{
-    background-image: url('../Assets/bear.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    position: relative;
-    z-index: 1;
+
+.hero-section {
+  background:
+    linear-gradient(90deg, rgba(3, 9, 20, .94) 0%, rgba(3, 9, 20, .78) 52%, rgba(3, 9, 20, .45) 100%),
+    url('../Assets/bear.jpg') center / cover no-repeat;
 }
-
-section::after{
-    content: '';
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: .8;
-    /* background-color: black; */
-    background-image: url('../Assets/11.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.hero-art {
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.25));
 }
-
-.curved-line {
-    width: 300px;
-    height: 100px;
-    margin: -4rem 0 0 1rem;
-    border-radius: 50%;
-    background: transparent;
-    border: 6px solid;
-    border-color: #00A7DD transparent transparent transparent;
-  }
-
-
-  

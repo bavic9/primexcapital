@@ -10,7 +10,7 @@
   position: fixed;
   inset: 0 0 0 auto;
   width: min(320px, 86vw);
-  padding: 88px 24px 28px;
+  padding: 70px 0px 0px;
   background: #fff;
   border-left: 1px solid #e4e7ec;
   box-shadow: -12px 0 35px rgba(16,24,40,.12);

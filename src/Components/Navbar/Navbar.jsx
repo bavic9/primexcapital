@@ -79,29 +79,29 @@ const Navbar = () => {
 
       {open && <button aria-label="Close menu" className="mobile-overlay" onClick={() => setOpen(false)} />}
 
-      <aside className={`mobile-menu ${open ? 'open' : ''}`} aria-label="Mobile navigation">
+      <aside className={`mobile-menu  ${open ? 'open' : ''}`} aria-label="Mobile navigation">
         <div className="absolute right-5 top-5">
-          <button onClick={() => setOpen(false)} className="rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Close menu">
+          <button onClick={() => setOpen(false)} className=" rounded-lg p-2 text-slate-700 hover:bg-slate-100" aria-label="Close menu">
             <FaTimes size={20} />
           </button>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col px-4 pb-5 gap-2 bg-white">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`rounded-lg px-3 py-3 text-sm font-semibold ${
+              className={`rounded-lg px-6 py-3 text-sm font-semibold ${
                 location.pathname === link.to ? 'bg-blue/10 text-blue' : 'text-slate-700 hover:bg-slate-50'
               }`}
             >
               {link.label}
             </Link>
           ))}
-          <div className="mt-3 border-t border-slate-100 pt-4">
+          <div className="px-6 border-t border-slate-100 pt-4">
             {authUser ? (
               <button onClick={handleSignOut} className="secondary-btn w-full">Logout</button>
             ) : (
-              <Link to="/login" className="primary-btn w-full">Login</Link>
+              <Link to="/login" className="primary-btn w-fit">Login</Link>
             )}
           </div>
         </div>
